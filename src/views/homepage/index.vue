@@ -4,7 +4,7 @@
     <section class="cd-website-homepage-left">
       <section class="cd-website-homepage-title">
         <h1>Carpediem</h1>
-        <p>基于Vue3,面向设计师和开发者等组件库</p>
+        <p>基于Vue3+TS,面向设计师和开发者等组件库</p>
       </section>
       <div class="cd-website-homepage-carpediemImg">
         <cd-image
@@ -20,7 +20,7 @@
 
       <!-- 使用指南 -->
       <section class="cd-website-manual">
-        <h2 id="one">使用指南</h2>
+        <h2 id="one" :ref="anchor">使用指南</h2>
         <div>
           <h4>全局使用</h4>
           <div class="cd-website-manual-whole-situation-content">
@@ -48,16 +48,100 @@
       </div>
     </section>
   </div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
+  <div>sad</div>
 </template>
 
 <script lang="ts">
+import useWindowSize from "@/hooks/useWindowSize";
+import useDivTop from "@/hooks/useDivTop";
 import carpediem from "@/assets/carpediem.png";
-import { ref } from "vue";
+import { onMounted, reactive, ref, watch } from "vue";
+import { useRoute, useRouter } from "vue-router";
 export default {
   setup() {
     // carpediem图片
     let carpediemImg = ref<string>();
     carpediemImg.value = carpediem;
+    // 锚点链接
+
+    console.log(window.location.hash);
+    const router = useRouter();
+    // setTimeout(() => {
+    // location.hash = "#one";
+    router.push("/homepage#one");
+    // }, 2000);
+
     interface rightNav {
       anchorName: string;
       title: string;
@@ -68,9 +152,80 @@ export default {
         title: "使用指南",
       },
     ]);
+
+    // 对于锚点的处理
+    onMounted(() => {
+      initAnchorData();
+      onResize();
+      onScroll();
+    });
+    let currentAnchor = ref<number>(-1);
+    watch(
+      currentAnchor,
+      (newval: number) => {
+        console.log(newval);
+      },
+      { immediate: true }
+    );
+    let anchorArray = ref<object[]>([]);
+    const anchor = (el: object) => {
+      anchorArray.value.push(el);
+    };
+
+    interface IAnchor {
+      isShow: boolean;
+      top: number;
+    }
+    let anchorData = ref<IAnchor[]>([]);
+    function initAnchorData() {
+      for (let i: number = 0; i < anchorArray.value.length; i++) {
+        anchorData.value.push({ isShow: false, top: 0 });
+      }
+    }
+    function setAnchorTop() {
+      for (let i: number = 0; i < anchorArray.value.length; i++) {
+        anchorData.value[i].top = useDivTop(
+          anchorArray.value[i] as HTMLElement
+        );
+      }
+    }
+    function setAnchorIsShow() {
+      // 设置那个盒子看得见
+      let windowSize: { height: number; width: number } = useWindowSize();
+      for (let i: number = 0; i < anchorArray.value.length; i++) {
+        if (
+          anchorData.value[i].top >= 90 &&
+          anchorData.value[i].top <= windowSize.height
+        ) {
+          anchorData.value[i].isShow = true;
+        } else {
+          anchorData.value[i].isShow = false;
+        }
+      }
+    }
+    function seCurrentAnchor() {
+      for (let i: number = 0; i < anchorArray.value.length; i++) {
+        if (anchorData.value[i].isShow) {
+          currentAnchor.value = i;
+        }
+      }
+    }
+    window.addEventListener("scroll", onScroll);
+    function onScroll() {
+      setAnchorTop();
+      setAnchorIsShow();
+      seCurrentAnchor();
+    }
+    window.addEventListener("resize", onResize);
+    function onResize() {
+      setAnchorIsShow();
+      seCurrentAnchor();
+    }
+
     return {
       carpediemImg,
       rightNavData,
+      anchor,
     };
   },
 };

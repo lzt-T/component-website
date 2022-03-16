@@ -97,16 +97,11 @@ export default {
     let appWidth = ref<number>();
     let isAnimation = ref<boolean>(false);
     let isConceal = ref<boolean>(false);
+    // 页面大小改变时
     window.addEventListener("resize", onResize);
-    const route = useRoute();
-    function refresh() {
-      navList.value.forEach((val, ind) => {
-        if (val.router == route.path) {
-          selectInd.value = ind;
-        }
-      });
+    function onResize(): void {
+      appWidth.value = app.value?.clientWidth;
     }
-    window.addEventListener("pageshow", refresh);
     watch(appWidth, (newval, oldval) => {
       if (newval !== undefined) {
         isConceal.value = newval >= 920 ? false : true;
@@ -115,6 +110,16 @@ export default {
         }
       }
     });
+    // 页面刷新时
+    window.addEventListener("pageshow", refresh);
+    const route = useRoute();
+    function refresh() {
+      navList.value.forEach((val, ind) => {
+        if (val.router == route.path) {
+          selectInd.value = ind;
+        }
+      });
+    }
     watch(isConceal, (newval, oldval) => {
       if (newval) {
         isAnimation.value = true;
@@ -123,9 +128,6 @@ export default {
     onMounted(() => {
       onResize();
     });
-    function onResize() {
-      appWidth.value = app.value?.clientWidth;
-    }
     // 菜单的出现和消失
     let controlNav = ref<boolean>();
     function onMenuChange() {
