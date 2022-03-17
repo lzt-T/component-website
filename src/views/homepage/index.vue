@@ -37,94 +37,27 @@
         </div>
       </section>
     </section>
-    <section class="cd-website-homepage-right">
+    <section class="cd-website-homepage-right" v-show="isRightNavShow">
       <h3 class="cd-website-homepage-right-title">CONTENTS</h3>
       <div
         v-for="(data, ind) in rightNavData"
         :key="ind"
-        class="cd-website-homepage-right-content"
+        :class="{
+          'cd-website-homepage-right-content': true,
+          'cd-website-homepage-right-content-currentAnchor':
+            currentAnchor == ind,
+        }"
+        @click="setCurrentAnchor(ind)"
       >
         <a :href="'#' + data.anchorName">{{ data.title }}</a>
       </div>
     </section>
   </div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
-  <div>sad</div>
 </template>
 
 <script lang="ts">
-import useWindowSize from "@/hooks/useWindowSize";
-import useDivTop from "@/hooks/useDivTop";
+import useCurrentAbchor from "@/hooks/useCurrentAnchor";
+import useRightNavShow from "@/hooks/useRightNavShow";
 import carpediem from "@/assets/carpediem.png";
 import { onMounted, reactive, ref, watch } from "vue";
 import { useRoute, useRouter } from "vue-router";
@@ -133,14 +66,6 @@ export default {
     // carpediem图片
     let carpediemImg = ref<string>();
     carpediemImg.value = carpediem;
-    // 锚点链接
-
-    console.log(window.location.hash);
-    const router = useRouter();
-    // setTimeout(() => {
-    // location.hash = "#one";
-    router.push("/homepage#one");
-    // }, 2000);
 
     interface rightNav {
       anchorName: string;
@@ -152,80 +77,29 @@ export default {
         title: "使用指南",
       },
     ]);
-
+    let isRightNavShow = ref<boolean>(true);
+    useRightNavShow(isRightNavShow);
     // 对于锚点的处理
-    onMounted(() => {
-      initAnchorData();
-      onResize();
-      onScroll();
-    });
     let currentAnchor = ref<number>(-1);
-    watch(
-      currentAnchor,
-      (newval: number) => {
-        console.log(newval);
-      },
-      { immediate: true }
-    );
     let anchorArray = ref<object[]>([]);
     const anchor = (el: object) => {
       anchorArray.value.push(el);
     };
-
-    interface IAnchor {
-      isShow: boolean;
-      top: number;
+    useCurrentAbchor(anchorArray, anchor, currentAnchor);
+    function setCurrentAnchor(ind: number): void {
+      setTimeout(() => {
+        document.documentElement.scrollTop =
+          document.documentElement.scrollTop - 100;
+        currentAnchor.value = ind;
+      }, 10);
     }
-    let anchorData = ref<IAnchor[]>([]);
-    function initAnchorData() {
-      for (let i: number = 0; i < anchorArray.value.length; i++) {
-        anchorData.value.push({ isShow: false, top: 0 });
-      }
-    }
-    function setAnchorTop() {
-      for (let i: number = 0; i < anchorArray.value.length; i++) {
-        anchorData.value[i].top = useDivTop(
-          anchorArray.value[i] as HTMLElement
-        );
-      }
-    }
-    function setAnchorIsShow() {
-      // 设置那个盒子看得见
-      let windowSize: { height: number; width: number } = useWindowSize();
-      for (let i: number = 0; i < anchorArray.value.length; i++) {
-        if (
-          anchorData.value[i].top >= 90 &&
-          anchorData.value[i].top <= windowSize.height
-        ) {
-          anchorData.value[i].isShow = true;
-        } else {
-          anchorData.value[i].isShow = false;
-        }
-      }
-    }
-    function seCurrentAnchor() {
-      for (let i: number = 0; i < anchorArray.value.length; i++) {
-        if (anchorData.value[i].isShow) {
-          currentAnchor.value = i;
-        }
-      }
-    }
-    window.addEventListener("scroll", onScroll);
-    function onScroll() {
-      setAnchorTop();
-      setAnchorIsShow();
-      seCurrentAnchor();
-    }
-    window.addEventListener("resize", onResize);
-    function onResize() {
-      setAnchorIsShow();
-      seCurrentAnchor();
-    }
-
     return {
       carpediemImg,
       rightNavData,
+      isRightNavShow,
       anchor,
+      currentAnchor,
+      setCurrentAnchor,
     };
   },
 };
@@ -243,7 +117,7 @@ export default {
 .cd-website-homepage-right {
   position: sticky;
   height: 30px;
-  top: 70px;
+  top: 100px;
   flex: 1;
   margin-left: 64px;
 }
@@ -254,6 +128,11 @@ export default {
 }
 .cd-website-homepage-right-content {
   line-height: 23px;
+  padding-left: 5px;
+}
+.cd-website-homepage-right-content-currentAnchor {
+  border-left: 2.5px solid #409eff;
+  border-radius: 5px;
 }
 .cd-website-homepage-right-content a {
   font-size: 12px;

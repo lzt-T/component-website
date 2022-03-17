@@ -113,7 +113,7 @@ export default {
     // 页面刷新时
     window.addEventListener("pageshow", refresh);
     const route = useRoute();
-    function refresh() {
+    function refresh(): void {
       navList.value.forEach((val, ind) => {
         if (val.router == route.path) {
           selectInd.value = ind;
@@ -251,6 +251,7 @@ img {
 }
 .cd-website-app-conceal {
   position: sticky;
+  z-index: 1;
   top: 50px;
   padding-left: 10px;
   height: 33px;
@@ -258,6 +259,7 @@ img {
   width: 100%;
   border-top: 1px solid #dcdfe6;
   border-bottom: 1px solid #dcdfe6;
+  background-color: white;
   background-color: white;
 }
 .cd-website-app-nav {
@@ -347,7 +349,7 @@ img {
   cursor: pointer;
 }
 .cd-website-app-footer {
-  width: calc(80% - 64px);
+  width: calc(92%);
   position: relative;
   padding: 16px 35px 100px;
   font-size: 14px;

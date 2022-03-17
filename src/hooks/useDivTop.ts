@@ -1,6 +1,5 @@
 
-import { ref } from 'vue'
 export default function (dome: HTMLElement) {
-    let top = dome.getBoundingClientRect().top
+    let top: number = dome.getBoundingClientRect().top
     return top
 }
