@@ -70,7 +70,13 @@
     </section>
   </div>
   <!-- 页面太小时的出现的Menu -->
-  <cd-drawer v-model="controlNav" direction="left" :size="35" title="Menu">
+  <cd-drawer
+    v-model="controlNav"
+    direction="left"
+    :size="35"
+    title="Menu"
+    class="cd-website-app-nav-list-every-frame"
+  >
     <div
       v-for="(data, ind) in navList"
       :key="ind"
@@ -324,6 +330,10 @@ img {
   position: absolute;
   width: 280px;
   right: 0px;
+}
+.cd-website-app-nav-list-every-frame {
+  position: relative;
+  z-index: 2;
 }
 .cd-website-app-nav-list-every {
   margin-top: 2px;

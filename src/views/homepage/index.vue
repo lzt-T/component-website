@@ -1,7 +1,7 @@
 <template>
-  <div class="cd-website-homepage-farme">
+  <div class="cd-public-frame">
     <!-- 标题 -->
-    <section class="cd-website-homepage-left">
+    <section class="cd-public-left-frame">
       <section class="cd-website-homepage-title">
         <h1>Carpediem</h1>
         <p>基于Vue3+TS,面向设计师和开发者等组件库</p>
@@ -37,31 +37,25 @@
         </div>
       </section>
     </section>
-    <section class="cd-website-homepage-right" v-show="isRightNavShow">
-      <h3 class="cd-website-homepage-right-title">CONTENTS</h3>
-      <div
-        v-for="(data, ind) in rightNavData"
-        :key="ind"
-        :class="{
-          'cd-website-homepage-right-content': true,
-          'cd-website-homepage-right-content-currentAnchor':
-            currentAnchor == ind,
-        }"
-        @click="setCurrentAnchor(ind)"
-      >
-        <a :href="'#' + data.anchorName">{{ data.title }}</a>
-      </div>
-    </section>
+    <right-nav
+      :rightNavData="rightNavData"
+      :isRightNavShow="isRightNavShow"
+      :currentAnchor="currentAnchor"
+    ></right-nav>
   </div>
 </template>
 
 <script lang="ts">
+import "@/assets/css/public.css";
+import rightNav from "@/components/rightNav/inidex.vue";
 import useCurrentAbchor from "@/hooks/useCurrentAnchor";
 import useRightNavShow from "@/hooks/useRightNavShow";
 import carpediem from "@/assets/carpediem.png";
 import { onMounted, reactive, ref, watch } from "vue";
-import { useRoute, useRouter } from "vue-router";
 export default {
+  components: {
+    rightNav,
+  },
   setup() {
     // carpediem图片
     let carpediemImg = ref<string>();
@@ -86,58 +80,18 @@ export default {
       anchorArray.value.push(el);
     };
     useCurrentAbchor(anchorArray, anchor, currentAnchor);
-    function setCurrentAnchor(ind: number): void {
-      setTimeout(() => {
-        document.documentElement.scrollTop =
-          document.documentElement.scrollTop - 100;
-        currentAnchor.value = ind;
-      }, 10);
-    }
     return {
       carpediemImg,
       rightNavData,
       isRightNavShow,
       anchor,
       currentAnchor,
-      setCurrentAnchor,
     };
   },
 };
 </script>
 
 <style scoped>
-.cd-website-homepage-farme {
-  position: relative;
-  display: flex;
-  padding: 35px;
-}
-.cd-website-homepage-left {
-  flex: 4;
-}
-.cd-website-homepage-right {
-  position: sticky;
-  height: 30px;
-  top: 100px;
-  flex: 1;
-  margin-left: 64px;
-}
-.cd-website-homepage-right-title {
-  font-size: 12px;
-  color: #606266;
-  line-height: 30px;
-}
-.cd-website-homepage-right-content {
-  line-height: 23px;
-  padding-left: 5px;
-}
-.cd-website-homepage-right-content-currentAnchor {
-  border-left: 2.5px solid #409eff;
-  border-radius: 5px;
-}
-.cd-website-homepage-right-content a {
-  font-size: 12px;
-  color: #909399;
-}
 .cd-website-homepage-title {
   text-align: center;
 }
