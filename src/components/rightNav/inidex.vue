@@ -16,9 +16,9 @@
 </template>
 
 <script lang="ts">
-import { ref, watch } from "vue";
+import { ref, watch, defineComponent } from "vue";
 import useAbchorClick from "@/hooks/useAbchorClick";
-export default {
+export default defineComponent({
   props: {
     isRightNavShow: {
       type: Boolean,
@@ -49,7 +49,7 @@ export default {
       setCurrentAnchor,
     };
   },
-};
+});
 </script>
 
 <style scoped>

@@ -20,7 +20,7 @@
 
       <!-- 使用指南 -->
       <section class="cd-website-manual">
-        <h2 id="one" :ref="anchor">使用指南</h2>
+        <h2 id="one" :ref="anchor" class="cd-public-headline-h2">使用指南</h2>
         <div>
           <h4>全局使用</h4>
           <div class="cd-website-manual-whole-situation-content">
@@ -110,10 +110,6 @@ export default {
 .cd-website-homepage-carpediemImg p {
   text-align: center;
   line-height: 35px;
-}
-.cd-website-manual h2 {
-  font-size: 26px;
-  margin: 36px 0px 20px;
 }
 .cd-website-manual h4 {
   font-size: 17px;

@@ -370,7 +370,7 @@ img {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 95%;
+  width: 96%;
   border-top: 1px solid #dcdfe6;
 }
 .cd-website-app-footer-lefticon {

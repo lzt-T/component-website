@@ -30,3 +30,11 @@
     border-left: 2.5px solid #409eff;
     border-radius: 5px;
   }
+.cd-public-headline-h2{
+    font-size: 26px;
+    margin: 36px 0px 20px;
+}
+.cd-public-headline-h1{
+    font-size: 35px;
+    margin: 24px 0px 32px;
+}
