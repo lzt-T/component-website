@@ -167,6 +167,10 @@ export default {
         title: "Button 按钮",
         router: "/button",
       },
+      {
+        title: "Boeder 边框",
+        router: "/border",
+      },
     ]);
 
     return {
@@ -361,7 +365,7 @@ img {
 .cd-website-app-footer {
   width: calc(92%);
   position: relative;
-  padding: 16px 35px 100px;
+  padding: 16px 35px 300px;
   font-size: 14px;
   color: #409eff;
 }

@@ -13,6 +13,11 @@ const routes: Array<RouteRecordRaw> = [
     name: 'buttonRoute',
     path: '/button',
     component: () => import("@/views/button/index.vue")
+  },
+  {
+    name: 'borderRoute',
+    path: '/border',
+    component: () => import("@/views/border/index.vue")
   }
 ]
 
