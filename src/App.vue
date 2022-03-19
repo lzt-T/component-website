@@ -241,6 +241,7 @@ img {
   color: #409eff;
   font-size: 26px;
   cursor: pointer;
+  white-space: nowrap;
 }
 .cd-website-app-header-githubImg {
   position: absolute;
@@ -338,7 +339,6 @@ img {
 .cd-website-app-nav-list-every {
   margin-top: 2px;
   margin-bottom: 2px;
-  height: 40px;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;

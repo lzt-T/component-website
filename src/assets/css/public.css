@@ -37,4 +37,26 @@
 .cd-public-headline-h1{
     font-size: 35px;
     margin: 24px 0px 32px;
+}.cd-public-p{
+    font-size: 16px;
+    margin: 16px 0px;
+}
+.cd-public-div-frame{
+    padding: 24px;
+    margin: 5px 0px;
+    border: 1px solid  #dcdfe6;
+    border-radius: 5px;
+}
+code{
+    background-color: #F5F7FA;
+    padding: 2.4px 8px;
+    color: #303133;
+}
+pre{
+    padding: 10px;
+    font-size: 16px;
+    line-height: 30px;
+    background-color: #f6f7f9;
+    white-space: pre-wrap;
+    word-break:break-all;
 }
