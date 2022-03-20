@@ -179,6 +179,10 @@ export default {
         title: "Layout 布局",
         router: "/layout",
       },
+      {
+        title: "Link 链接",
+        router: "/link",
+      },
     ]);
 
     return {

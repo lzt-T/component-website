@@ -29,6 +29,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/layout',
     component: () => import("@/views/layout/index.vue")
   },
+  {
+    name: 'linkRoute',
+    path: '/link',
+    component: () => import("@/views/link/index.vue")
+  },
 ]
 
 const router = createRouter({

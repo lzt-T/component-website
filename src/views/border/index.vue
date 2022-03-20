@@ -56,7 +56,7 @@
         :listName="['属性', '说明', '类型', '可选值', '默认值']"
       ></cd-table>
       <h2 class="cd-public-headline-h2" :ref="anchor" id="four">Border 插槽</h2>
-      <cd-table :data="borderSlot" :listName="['属性', '说明']"></cd-table>
+      <cd-table :data="borderSlot" :listName="['插槽名', '说明']"></cd-table>
     </section>
     <right-nav
       :rightNavData="rightNavData"
