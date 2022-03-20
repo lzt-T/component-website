@@ -58,7 +58,7 @@ export default {
   setup() {
     // 点击复制
     let copyData = ref<string>("");
-    function onCopy(data: string) {
+    function onCopy(data: string): void {
       copyData.value = data;
     }
     let isShow = ref<boolean>(false);

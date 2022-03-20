@@ -55,6 +55,8 @@
         :data="attributesFormData"
         :listName="['属性', '说明', '类型', '可选值', '默认值']"
       ></cd-table>
+      <h2 class="cd-public-headline-h2" :ref="anchor" id="four">Border 插槽</h2>
+      <cd-table :data="borderSlot" :listName="['属性', '说明']"></cd-table>
     </section>
     <right-nav
       :rightNavData="rightNavData"
@@ -92,6 +94,10 @@ export default {
       {
         anchorName: "three",
         title: "Border 属性",
+      },
+      {
+        anchorName: "four",
+        title: "Border 插槽",
       },
     ]);
     let isRightNavShow = ref<boolean>(true);
@@ -135,12 +141,23 @@ export default {
         default: "cd-border",
       },
     ]);
+    interface IborderSlot {
+      property: string;
+      explain: string;
+    }
+    let borderSlot = ref<IborderSlot[]>([
+      {
+        property: "--",
+        explain: "自定义默认内容",
+      },
+    ]);
     return {
       rightNavData,
       isRightNavShow,
       currentAnchor,
       anchor,
       attributesFormData,
+      borderSlot,
     };
   },
 };

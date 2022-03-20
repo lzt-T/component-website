@@ -175,6 +175,10 @@ export default {
         title: "Icon 图标",
         router: "/icon",
       },
+      {
+        title: "Layout 布局",
+        router: "/layout",
+      },
     ]);
 
     return {
@@ -369,7 +373,7 @@ img {
 .cd-website-app-footer {
   width: calc(92%);
   position: relative;
-  padding: 16px 35px 300px;
+  padding: 16px 35px 500px;
   font-size: 14px;
   color: #409eff;
 }

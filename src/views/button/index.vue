@@ -274,6 +274,10 @@
         :data="attributesFormData"
         :listName="['属性', '说明', '类型', '可选值', '默认值']"
       ></cd-table>
+      <h2 class="cd-public-headline-h2" :ref="anchor" id="seven">
+        Button 插槽
+      </h2>
+      <cd-table :data="buttonSlot" :listName="['属性', '说明']"></cd-table>
     </section>
     <right-nav
       :rightNavData="rightNavData"
@@ -323,6 +327,10 @@ export default {
       {
         anchorName: "six",
         title: "Button 属性",
+      },
+      {
+        anchorName: "seven",
+        title: "Button 插槽",
       },
     ]);
     let currentAnchor = ref<number>(-1);
@@ -411,6 +419,16 @@ export default {
         default: "false",
       },
     ]);
+    interface IborderSlot {
+      property: string;
+      explain: string;
+    }
+    let buttonSlot = ref<IborderSlot[]>([
+      {
+        property: "--",
+        explain: "自定义默认内容",
+      },
+    ]);
     // 右边导航
     let isRightNavShow = ref<boolean>(true);
     useRightNavShow(isRightNavShow);
@@ -420,6 +438,7 @@ export default {
       rightNavData,
       anchor,
       currentAnchor,
+      buttonSlot,
     };
   },
 };

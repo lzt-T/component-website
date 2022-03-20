@@ -23,7 +23,12 @@ const routes: Array<RouteRecordRaw> = [
     name: 'iconRoute',
     path: '/icon',
     component: () => import("@/views/icon/index.vue")
-  }
+  },
+  {
+    name: 'layoutRoute',
+    path: '/layout',
+    component: () => import("@/views/layout/index.vue")
+  },
 ]
 
 const router = createRouter({
