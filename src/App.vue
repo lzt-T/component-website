@@ -187,6 +187,10 @@ export default {
         title: "Scrollbar 滚动条",
         router: "/scrollbar",
       },
+      {
+        title: "Cascader 级联选择器",
+        router: "/cascader",
+      },
     ]);
 
     return {

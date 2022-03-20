@@ -39,6 +39,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/scrollbar',
     component: () => import("@/views/scrollbar/index.vue")
   },
+  {
+    name: 'cascaderRoute',
+    path: '/cascader',
+    component: () => import("@/views/cascader/index.vue")
+  },
 ]
 
 const router = createRouter({

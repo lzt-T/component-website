@@ -132,7 +132,10 @@
       &lt;/div>
     &lt;/cd-scrollbar>
   &lt;/template&gt;
+
+
   &lt;script lang="ts">
+  import { ref } from "vue";
     export default {
       setup() {
         let num = ref&lt;number>(4);
