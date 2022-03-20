@@ -5,6 +5,7 @@
 }
 .cd-public-left-frame{
     flex: 4;
+    width: 0;
 }
 .cd-public-right-frame{
     position: sticky;

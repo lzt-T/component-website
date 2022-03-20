@@ -183,6 +183,10 @@ export default {
         title: "Link 链接",
         router: "/link",
       },
+      {
+        title: "Scrollbar 滚动条",
+        router: "/scrollbar",
+      },
     ]);
 
     return {
@@ -204,6 +208,7 @@ export default {
 
 <style>
 body::-webkit-scrollbar {
+  height: 6px;
   width: 6px;
 }
 /* 滑块 */

@@ -34,6 +34,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/link',
     component: () => import("@/views/link/index.vue")
   },
+  {
+    name: 'scrollbarRoute',
+    path: '/scrollbar',
+    component: () => import("@/views/scrollbar/index.vue")
+  },
 ]
 
 const router = createRouter({
