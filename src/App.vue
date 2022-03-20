@@ -171,6 +171,10 @@ export default {
         title: "Boeder 边框",
         router: "/border",
       },
+      {
+        title: "Icon 图标",
+        router: "/icon",
+      },
     ]);
 
     return {

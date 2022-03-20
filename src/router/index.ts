@@ -18,6 +18,11 @@ const routes: Array<RouteRecordRaw> = [
     name: 'borderRoute',
     path: '/border',
     component: () => import("@/views/border/index.vue")
+  },
+  {
+    name: 'iconRoute',
+    path: '/icon',
+    component: () => import("@/views/icon/index.vue")
   }
 ]
 
