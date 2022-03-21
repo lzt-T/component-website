@@ -28,10 +28,11 @@
         :key="ind"
         class="cd-website-scroll-everydiv"
       >
-        {{ ind }}
+        { { ind } }
       &lt;/div>
     &lt;/cd-scrollbar>
   &lt;/template&gt;
+
   &lt;style scoped>
   .cd-website-scroll-everydiv {
   height: 38px;
@@ -75,11 +76,12 @@
           :key="ind"
           class="cd-website-scroll-everyspan"
         >
-          {{ ind }}
+          { { ind } }
         &lt;/div>
       &lt;/cd-scrollbar>
     &lt;/div>
   &lt;/template&gt;
+
   &lt;style scoped>
   .cd-public-div-frame{
     padding: 24px;
@@ -128,11 +130,10 @@
         :key="ind"
         class="cd-website-scroll-everydiv"
       >
-        {{ ind }}
+        { { ind } }
       &lt;/div>
     &lt;/cd-scrollbar>
   &lt;/template&gt;
-
 
   &lt;script lang="ts">
   import { ref } from "vue";
@@ -155,6 +156,7 @@
       }
     }
   &lt;/script>
+
   &lt;style scoped>
   .cd-website-scroll-everydiv {
   height: 38px;

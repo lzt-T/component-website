@@ -59,6 +59,7 @@
             :option="optionData"
         >&lt;/cd-cascader>
     &lt;/template&gt;
+    
     &lt;script lang="ts">
     import { ref } from "vue";
     export default {
@@ -292,13 +293,14 @@
       </div>
       <cd-collapse title="查看代码">
         <pre>
-  &lt;template&gt;
-    &lt;cd-cascader
-      v-model="selectingData"
-      :option="optionData"
-      :showAllLevels="false"
-    >&lt;/cd-cascader>
-  &lt;/template&gt;
+    &lt;template&gt;
+      &lt;cd-cascader
+        v-model="selectingData"
+        :option="optionData"
+        :showAllLevels="false"
+      >&lt;/cd-cascader>
+    &lt;/template&gt;
+
     &lt;script lang="ts">
     import { ref } from "vue";
     export default {
@@ -517,7 +519,7 @@
             };
         }
     }
-  &lt;/script>
+    &lt;/script>
         </pre>
       </cd-collapse>
       <h2 id="three" :ref="anchor" class="cd-public-headline-h2">

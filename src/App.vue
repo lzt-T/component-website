@@ -191,6 +191,10 @@ export default {
         title: "Cascader 级联选择器",
         router: "/cascader",
       },
+      {
+        title: "Checkbox 多选框",
+        router: "/checkbox",
+      },
     ]);
 
     return {

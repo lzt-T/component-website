@@ -57,6 +57,7 @@
           &lt;cd-col :span="8" class="cd-website-col-background-color">&lt;/cd-col>
         &lt;/cd-row>
     &lt;/template&gt;
+    
     &lt;style scoped>
     .cd-website-col-background-color {
         margin: 10px 0px;
@@ -95,6 +96,7 @@
           &lt;cd-col :span="8" class="cd-website-col-background-color">&lt;/cd-col>
         &lt;/cd-row>
     &lt;/template&gt;
+
     &lt;style scoped>
     .cd-website-col-background-color {
         margin: 10px 0px;
@@ -144,6 +146,7 @@
           &lt;cd-col :span="4" class="cd-website-col-background-color">&lt;/cd-col>
         &lt;/cd-row>
     &lt;/template&gt;
+
     &lt;style scoped>
     .cd-website-col-background-color {
         margin: 10px 0px;
@@ -211,6 +214,7 @@
           >&lt;/cd-col>
         &lt;/cd-row>
     &lt;/template&gt;  
+
     &lt;style scoped>
     .cd-website-col-background-color {
     margin-top: 10px;

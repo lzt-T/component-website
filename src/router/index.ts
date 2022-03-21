@@ -44,6 +44,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/cascader',
     component: () => import("@/views/cascader/index.vue")
   },
+  {
+    name: 'checkboxRoute',
+    path: '/checkbox',
+    component: () => import("@/views/checkbox/index.vue")
+  },
 ]
 
 const router = createRouter({
