@@ -199,6 +199,10 @@ export default {
         title: "DatePicker 日期选择器",
         router: "/datepicker",
       },
+      {
+        title: "Input 输入框",
+        router: "/input",
+      },
     ]);
 
     return {

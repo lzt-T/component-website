@@ -34,7 +34,7 @@
         通过 <code>disabled</code> 属性来设定元素的禁用状态
       </p>
       <div class="cd-public-div-frame">
-        <cd-row :gap="20" class="cd-border-row-margin" flexWrap="wrap">
+        <cd-row :gap="20" flexWrap="wrap">
           <cd-link disabled>default</cd-link>
           <cd-link disabled color="#409EFF">primary</cd-link>
           <cd-link disabled color="#67C23A">success</cd-link>
@@ -64,7 +64,7 @@
       ></cd-alter>
       <p class="cd-public-p">带图标的链接</p>
       <div class="cd-public-div-frame">
-        <cd-row :gap="20" class="cd-border-row-margin" flexWrap="wrap">
+        <cd-row :gap="20" flexWrap="wrap">
           <cd-link> <cd-icon name="editTow" :size="16"></cd-icon>Edit</cd-link>
           <cd-link> <cd-icon name="trash" :size="16"></cd-icon>Trash</cd-link>
         </cd-row>
