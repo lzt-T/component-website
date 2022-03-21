@@ -282,15 +282,29 @@
         :listName="['属性', '说明', '类型', '可选值', '默认值']"
       ></cd-table>
       <h2 id="seven" :ref="anchor" class="cd-public-headline-h2">
+        Checkbox 事件
+      </h2>
+      <cd-table
+        :data="CheckboxEvent"
+        :listName="['事件名', '说明', '参数']"
+      ></cd-table>
+      <h2 id="eight" :ref="anchor" class="cd-public-headline-h2">
         Checkbox 插槽
       </h2>
       <cd-table :data="checkboxSlot" :listName="['插槽名', '说明']"></cd-table>
-      <h2 id="eight" :ref="anchor" class="cd-public-headline-h2">
+      <h2 id="nine" :ref="anchor" class="cd-public-headline-h2">
         Checkbox-Group 属性
       </h2>
       <cd-table
         :data="checkboxGroupAttributesForm"
         :listName="['属性', '说明', '类型', '可选值', '默认值']"
+      ></cd-table>
+      <h2 id="ten" :ref="anchor" class="cd-public-headline-h2">
+        Checkbox-Group 事件
+      </h2>
+      <cd-table
+        :data="CheckboxGroupEvent"
+        :listName="['事件名', '说明', '参数']"
       ></cd-table>
     </section>
     <right-nav
@@ -349,11 +363,19 @@ export default {
       },
       {
         anchorName: "seven",
-        title: "Checkbox 插槽",
+        title: "Checkbox 事件",
       },
       {
         anchorName: "eight",
+        title: "Checkbox 插槽",
+      },
+      {
+        anchorName: "nine",
         title: "Checkbox-Group 属性",
+      },
+      {
+        anchorName: "ten",
+        title: "Checkbox-Group 插槽",
       },
     ]);
     let isRightNavShow = ref<boolean>(true);
@@ -489,6 +511,26 @@ export default {
       },
     ]);
 
+    interface ICheckboxEvent {
+      property: string;
+      explain: string;
+      parameter: string;
+    }
+    let CheckboxEvent = ref<ICheckboxEvent[]>([
+      {
+        property: "onChange",
+        explain: "当绑定值变化时触发的事件",
+        parameter: "返回一个boolean值",
+      },
+    ]);
+    let CheckboxGroupEvent = ref<ICheckboxEvent[]>([
+      {
+        property: "onChange",
+        explain: "当多选框组选择发生改变时触发的事件",
+        parameter: "返回一个string数组",
+      },
+    ]);
+
     interface ICheckboxSlot {
       property: string;
       explain: string;
@@ -510,6 +552,8 @@ export default {
       checkboxAttributesForm,
       checkboxSlot,
       checkboxGroupAttributesForm,
+      CheckboxEvent,
+      CheckboxGroupEvent,
     };
   },
 };

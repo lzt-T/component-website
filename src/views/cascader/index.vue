@@ -529,6 +529,13 @@
         :data="cascaderAttributesForm"
         :listName="['属性', '说明', '类型', '可选值', '默认值']"
       ></cd-table>
+      <h2 id="four" :ref="anchor" class="cd-public-headline-h2">
+        Cascader 事件
+      </h2>
+      <cd-table
+        :data="cascaderEvent"
+        :listName="['事件名', '说明', '参数']"
+      ></cd-table>
     </section>
     <right-nav
       :rightNavData="rightNavData"
@@ -777,6 +784,10 @@ export default {
         anchorName: "three",
         title: "Cascader 属性",
       },
+      {
+        anchorName: "four",
+        title: "Cascader 事件",
+      },
     ]);
     let isRightNavShow = ref<boolean>(true);
     useRightNavShow(isRightNavShow);
@@ -839,7 +850,18 @@ export default {
         default: "--",
       },
     ]);
-
+    interface ICascaderEvent {
+      property: string;
+      explain: string;
+      parameter: string;
+    }
+    let cascaderEvent = ref<ICascaderEvent[]>([
+      {
+        property: "change",
+        explain: "当选中节点变化时触发",
+        parameter: "返回一个字符串,为选择的值",
+      },
+    ]);
     return {
       rightNavData,
       isRightNavShow,
@@ -848,6 +870,7 @@ export default {
       optionData,
       selectingData,
       cascaderAttributesForm,
+      cascaderEvent,
     };
   },
 };

@@ -49,6 +49,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/checkbox',
     component: () => import("@/views/checkbox/index.vue")
   },
+  {
+    name: 'datepickerRoute',
+    path: '/datepicker',
+    component: () => import("@/views/datepicker/index.vue")
+  },
 ]
 
 const router = createRouter({

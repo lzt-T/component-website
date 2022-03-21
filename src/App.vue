@@ -195,6 +195,10 @@ export default {
         title: "Checkbox 多选框",
         router: "/checkbox",
       },
+      {
+        title: "DatePicker 日期选择器",
+        router: "/datepicker",
+      },
     ]);
 
     return {
@@ -390,7 +394,7 @@ img {
 .cd-website-app-footer {
   width: calc(92%);
   position: relative;
-  padding: 16px 35px 500px;
+  padding: 16px 35px 550px;
   font-size: 14px;
   color: #409eff;
 }

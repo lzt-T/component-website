@@ -177,6 +177,13 @@
         :listName="['属性', '说明', '类型', '可选值', '默认值']"
       ></cd-table>
       <h2 id="five" :ref="anchor" class="cd-public-headline-h2">
+        Scrollbar 事件
+      </h2>
+      <cd-table
+        :data="scrollbarEvent"
+        :listName="['事件名', '说明', '参数']"
+      ></cd-table>
+      <h2 id="six" :ref="anchor" class="cd-public-headline-h2">
         Scrollbar 插槽
       </h2>
       <cd-table :data="scrollbarSlot" :listName="['插槽名', '说明']"></cd-table>
@@ -234,6 +241,10 @@ export default {
       },
       {
         anchorName: "five",
+        title: "Scrollbar 事件",
+      },
+      {
+        anchorName: "six",
         title: "Scrollbar 插槽",
       },
     ]);
@@ -290,6 +301,19 @@ export default {
         default: "false",
       },
     ]);
+
+    interface IScrollbarEvent {
+      property: string;
+      explain: string;
+      parameter: string;
+    }
+    let scrollbarEvent = ref<IScrollbarEvent[]>([
+      {
+        property: "scroll",
+        explain: "滚动时触发的事件",
+        parameter: "--",
+      },
+    ]);
     interface IScrollbarSlot {
       property: string;
       explain: string;
@@ -310,6 +334,7 @@ export default {
       num,
       scrollbarAttributesForm,
       scrollbarSlot,
+      scrollbarEvent,
     };
   },
 };
