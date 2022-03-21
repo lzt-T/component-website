@@ -277,12 +277,256 @@
             };
         }
     }
+    &lt;/script>
         </pre>
       </cd-collapse>
-      <h2 id="one" :ref="anchor" class="cd-public-headline-h2">
+      <h2 id="two" :ref="anchor" class="cd-public-headline-h2">
         仅显示最后一级
       </h2>
-      <div class="cd-public-div-frame"></div>
+      <div class="cd-public-div-frame">
+        <cd-cascader
+          v-model="selectingData"
+          :option="optionData"
+          :showAllLevels="false"
+        ></cd-cascader>
+      </div>
+      <cd-collapse title="查看代码">
+        <pre>
+  &lt;template&gt;
+    &lt;cd-cascader
+      v-model="selectingData"
+      :option="optionData"
+      :showAllLevels="false"
+    >&lt;/cd-cascader>
+  &lt;/template&gt;
+    &lt;script lang="ts">
+    import { ref } from "vue";
+    export default {
+        setup() {
+            let selectingData = ref("");
+            let optionData = ref([
+                {
+                    value: "guide",
+                    children: [
+                        {
+                            value: "disciplines",
+                            children: [
+                                {
+                                    value: "consistency",
+                                },
+                                {
+                                    value: "feedback",
+                                },
+                                {
+                                    value: "efficiency",
+                                },
+                                {
+                                    value: "controllability",
+                                },
+                            ],
+                        },
+                        {
+                            value: "navigation",
+                            children: [
+                                {
+                                    value: "side nav",
+                                },
+                                {
+                                    value: "top nav",
+                                },
+                            ],
+                        },
+                    ],
+                },
+                {
+                    value: "component",
+                    children: [
+                        {
+                            value: "basic",
+                            children: [
+                                {
+                                    value: "layout",
+                                },
+                                {
+                                    value: "color",
+                                },
+                                {
+                                    value: "typography",
+                                },
+                                {
+                                    value: "icon",
+                                },
+                                {
+                                    value: "button",
+                                },
+                            ],
+                        },
+                        {
+                            value: "form",
+                            children: [
+                                {
+                                    value: "radio",
+                                },
+                                {
+                                    value: "checkbox",
+                                },
+                                {
+                                    value: "input",
+                                },
+                                {
+                                    value: "input-number",
+                                },
+                                {
+                                    value: "select",
+                                },
+                                {
+                                    value: "cascader",
+                                },
+                                {
+                                    value: "switch",
+                                },
+                                {
+                                    value: "slider",
+                                },
+                                {
+                                    value: "time-picker",
+                                },
+                                {
+                                    value: "date-picker",
+                                },
+                                {
+                                    value: "datetime-picker",
+                                },
+                                {
+                                    value: "upload",
+                                },
+                                {
+                                    value: "rate",
+                                },
+                                {
+                                    value: "form",
+                                },
+                            ],
+                        },
+                        {
+                            value: "data",
+                            children: [
+                                {
+                                    value: "table",
+                                },
+                                {
+                                    value: "tag",
+                                },
+                                {
+                                    value: "progress",
+                                },
+                                {
+                                    value: "tree",
+                                },
+                                {
+                                    value: "pagination",
+                                },
+                                {
+                                    value: "badge",
+                                },
+                            ],
+                        },
+                        {
+                            value: "notice",
+                            children: [
+                                {
+                                    value: "alert",
+                                },
+                                {
+                                    value: "loading",
+                                },
+                                {
+                                    value: "message",
+                                },
+                                {
+                                    value: "message-box",
+                                },
+                                {
+                                    value: "notification",
+                                },
+                            ],
+                        },
+                        {
+                            value: "navigation",
+                            children: [
+                                {
+                                    value: "menu",
+                                },
+                                {
+                                    value: "tabs",
+                                },
+                                {
+                                    value: "breadcrumb",
+                                },
+                                {
+                                    value: "dropdown",
+                                },
+                                {
+                                    value: "steps",
+                                },
+                            ],
+                        },
+                        {
+                            value: "others",
+                            children: [
+                                {
+                                    value: "dialog",
+                                },
+                                {
+                                    value: "tooltip",
+                                },
+                                {
+                                    value: "popover",
+                                },
+                                {
+                                    value: "card",
+                                },
+                                {
+                                    value: "carousel",
+                                },
+                                {
+                                    value: "collapse",
+                                },
+                            ],
+                        },
+                    ],
+                },
+                {
+                    value: "resource",
+                    children: [
+                        {
+                            value: "axure",
+                        },
+                        {
+                            value: "sketch",
+                        },
+                        {
+                            value: "docs",
+                        },
+                    ],
+                },
+            ]);
+            return {
+                optionData,
+                selectingData,
+            };
+        }
+    }
+  &lt;/script>
+        </pre>
+      </cd-collapse>
+      <h2 id="three" :ref="anchor" class="cd-public-headline-h2">
+        Cascader 属性
+      </h2>
+      <cd-table
+        :data="cascaderAttributesForm"
+        :listName="['属性', '说明', '类型', '可选值', '默认值']"
+      ></cd-table>
     </section>
     <right-nav
       :rightNavData="rightNavData"
@@ -525,19 +769,11 @@ export default {
       },
       {
         anchorName: "two",
-        title: "禁用状态",
+        title: "仅显示最后一级",
       },
       {
         anchorName: "three",
-        title: "图标链接",
-      },
-      {
-        anchorName: "four",
-        title: "Link 属性",
-      },
-      {
-        anchorName: "five",
-        title: "Link 插槽",
+        title: "Cascader 属性",
       },
     ]);
     let isRightNavShow = ref<boolean>(true);
@@ -548,6 +784,60 @@ export default {
       anchorArray.value.push(el);
     };
     useCurrentAbchor(anchorArray, anchor, currentAnchor);
+
+    // 表单
+    interface Iattributesfrom {
+      property: string;
+      explain: string;
+      type: string;
+      optional: string;
+      default: string;
+    }
+    let cascaderAttributesForm = ref<Iattributesfrom[]>([
+      {
+        property: "v-model",
+        explain: "返回选择的值",
+        type: "string",
+        optional: "--",
+        default: "--",
+      },
+      {
+        property: "placeholder",
+        explain: "输入框占位文本",
+        type: "string",
+        optional: "--",
+        default: "Select",
+      },
+      {
+        property: "height",
+        explain: "组件高度,最下值为24",
+        type: "number",
+        optional: "--",
+        default: "32",
+      },
+      {
+        property: "width",
+        explain: "组件宽度,最小值为200",
+        type: "number",
+        optional: "--",
+        default: "240",
+      },
+      {
+        property: "option",
+        explain: "可选项数据源,为必传选项",
+        type: "array",
+        optional: "--",
+        default: "--",
+      },
+      {
+        property: "name",
+        explain: "表单组件原生的name属性",
+        type: "string",
+        optional: "--",
+        default: "--",
+      },
+    ]);
+
     return {
       rightNavData,
       isRightNavShow,
@@ -555,6 +845,7 @@ export default {
       anchor,
       optionData,
       selectingData,
+      cascaderAttributesForm,
     };
   },
 };
