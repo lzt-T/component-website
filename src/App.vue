@@ -203,6 +203,10 @@ export default {
         title: "Input 输入框",
         router: "/input",
       },
+      {
+        title: "Input Number 数字输入框",
+        router: "/inputNumber",
+      },
     ]);
 
     return {

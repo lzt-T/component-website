@@ -1,7 +1,6 @@
 import { onMounted, ref, watch } from "vue";
 import useDivTop from "@/hooks/useDivTop";
 import useWindowSize from "@/hooks/useWindowSize";
-import { isDate } from "@vue/shared";
 export default function (anchorArray: any, anchor: object, currentAnchor: { value: number }): void {
 
     let length: number = 0;
@@ -33,7 +32,7 @@ export default function (anchorArray: any, anchor: object, currentAnchor: { valu
         let windowSize: { height: number; width: number } = useWindowSize();
         for (let i: number = 0; i < length; i++) {
             if (
-                anchorData[i].topds >= 90 &&
+                anchorData[i].topds >= 0 &&
                 anchorData[i].topds <= windowSize.height - 45
             ) {
                 anchorData[i].isShow = true;

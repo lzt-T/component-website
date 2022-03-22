@@ -59,6 +59,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/input',
     component: () => import("@/views/input/index.vue")
   },
+  {
+    name: 'inputNumberRoute',
+    path: '/inputNumber',
+    component: () => import("@/views/inputnumber/index.vue")
+  },
 ]
 
 const router = createRouter({
