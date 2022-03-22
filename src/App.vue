@@ -207,6 +207,10 @@ export default {
         title: "Input Number 数字输入框",
         router: "/inputNumber",
       },
+      {
+        title: "Radio 单选框",
+        router: "/radio",
+      },
     ]);
 
     return {

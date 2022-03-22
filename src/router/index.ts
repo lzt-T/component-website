@@ -64,6 +64,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/inputNumber',
     component: () => import("@/views/inputnumber/index.vue")
   },
+  {
+    name: 'radioRoute',
+    path: '/radio',
+    component: () => import("@/views/radio/index.vue")
+  },
 ]
 
 const router = createRouter({
