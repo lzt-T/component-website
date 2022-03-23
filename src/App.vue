@@ -211,6 +211,10 @@ export default {
         title: "Radio 单选框",
         router: "/radio",
       },
+      {
+        title: "Rate 评分",
+        router: "/rate",
+      },
     ]);
 
     return {
@@ -316,7 +320,8 @@ img {
 }
 .cd-website-app-nav {
   border-right: 1px solid #dcdfe6;
-  position: relative;
+  position: sticky;
+  top: 50px;
   overflow: auto;
   height: 100vh;
   min-width: 280px;

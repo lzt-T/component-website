@@ -69,6 +69,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/radio',
     component: () => import("@/views/radio/index.vue")
   },
+  {
+    name: 'rateRoute',
+    path: '/rate',
+    component: () => import("@/views/rate/index.vue")
+  },
 ]
 
 const router = createRouter({
