@@ -74,6 +74,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/rate',
     component: () => import("@/views/rate/index.vue")
   },
+  {
+    name: 'selectRoute',
+    path: '/select',
+    component: () => import("@/views/select/index.vue")
+  },
 ]
 
 const router = createRouter({

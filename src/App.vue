@@ -215,6 +215,10 @@ export default {
         title: "Rate 评分",
         router: "/rate",
       },
+      {
+        title: "Select 选择器",
+        router: "/select",
+      },
     ]);
 
     return {
