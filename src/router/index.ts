@@ -140,6 +140,14 @@ const routes: Array<RouteRecordRaw> = [
     },
     component: () => import("@/views/switch/index.vue")
   },
+  {
+    name: 'uploadRoute',
+    path: '/upload',
+    meta: {
+      title: 'Upload 上传 | Carpediem'
+    },
+    component: () => import("@/views/upload/index.vue")
+  },
 ]
 
 const router = createRouter({

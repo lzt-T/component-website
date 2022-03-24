@@ -227,6 +227,10 @@ export default {
         title: "Swicth 滑块",
         router: "/switch",
       },
+      {
+        title: "Upload 上传",
+        router: "/upload",
+      },
     ]);
 
     return {
