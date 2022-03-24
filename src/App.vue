@@ -231,6 +231,10 @@ export default {
         title: "Upload 上传",
         router: "/upload",
       },
+      {
+        title: "Avatar 头像",
+        router: "/avatar",
+      },
     ]);
 
     return {
@@ -339,7 +343,7 @@ img {
   position: sticky;
   top: 50px;
   overflow: auto;
-  height: 100vh;
+  height: calc(100vh - 50px);
   min-width: 280px;
   flex: 1;
 }

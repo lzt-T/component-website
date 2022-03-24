@@ -148,6 +148,14 @@ const routes: Array<RouteRecordRaw> = [
     },
     component: () => import("@/views/upload/index.vue")
   },
+  {
+    name: 'AvatarRoute',
+    path: '/avatar',
+    meta: {
+      title: 'Avatar 头像 | Carpediem'
+    },
+    component: () => import("@/views/avatar/index.vue")
+  },
 ]
 
 const router = createRouter({
