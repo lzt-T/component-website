@@ -132,6 +132,14 @@ const routes: Array<RouteRecordRaw> = [
     },
     component: () => import("@/views/slider/index.vue")
   },
+  {
+    name: 'switchRoute',
+    path: '/switch',
+    meta: {
+      title: 'Switch 滑块 | Carpediem'
+    },
+    component: () => import("@/views/switch/index.vue")
+  },
 ]
 
 const router = createRouter({

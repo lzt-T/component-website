@@ -223,6 +223,10 @@ export default {
         title: "Slider 滑块",
         router: "/slider",
       },
+      {
+        title: "Swicth 滑块",
+        router: "/switch",
+      },
     ]);
 
     return {
