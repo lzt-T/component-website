@@ -219,6 +219,10 @@ export default {
         title: "Select 选择器",
         router: "/select",
       },
+      {
+        title: "Slider 滑块",
+        router: "/slider",
+      },
     ]);
 
     return {
