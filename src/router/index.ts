@@ -180,6 +180,14 @@ const routes: Array<RouteRecordRaw> = [
     },
     component: () => import("@/views/collapse/index.vue")
   },
+  {
+    name: 'EmptyRoute',
+    path: '/empty',
+    meta: {
+      title: 'Empty 空状态 | Carpediem'
+    },
+    component: () => import("@/views/empty/index.vue")
+  },
 ]
 
 const router = createRouter({

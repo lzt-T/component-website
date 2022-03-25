@@ -247,6 +247,10 @@ export default {
         title: "Collapse 折叠面板",
         router: "/collapse",
       },
+      {
+        title: "Empty 空状态",
+        router: "/empty",
+      },
     ]);
 
     return {
