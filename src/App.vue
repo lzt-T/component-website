@@ -243,6 +243,10 @@ export default {
         title: "Carousel 走马灯",
         router: "/carousel",
       },
+      {
+        title: "Collapse 折叠面板",
+        router: "/collapse",
+      },
     ]);
 
     return {

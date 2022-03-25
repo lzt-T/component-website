@@ -172,6 +172,14 @@ const routes: Array<RouteRecordRaw> = [
     },
     component: () => import("@/views/carousel/index.vue")
   },
+  {
+    name: 'CollapseRoute',
+    path: '/collapse',
+    meta: {
+      title: 'Collapse 折叠面板 | Carpediem'
+    },
+    component: () => import("@/views/collapse/index.vue")
+  },
 ]
 
 const router = createRouter({
