@@ -156,6 +156,14 @@ const routes: Array<RouteRecordRaw> = [
     },
     component: () => import("@/views/avatar/index.vue")
   },
+  {
+    name: 'BadgeRoute',
+    path: '/badge',
+    meta: {
+      title: 'Badge 徽章 | Carpediem'
+    },
+    component: () => import("@/views/badge/index.vue")
+  },
 ]
 
 const router = createRouter({

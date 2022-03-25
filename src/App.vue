@@ -235,6 +235,10 @@ export default {
         title: "Avatar 头像",
         router: "/avatar",
       },
+      {
+        title: "Badge 徽章",
+        router: "/badge",
+      },
     ]);
 
     return {
