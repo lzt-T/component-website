@@ -239,6 +239,10 @@ export default {
         title: "Badge 徽章",
         router: "/badge",
       },
+      {
+        title: "Carousel 走马灯",
+        router: "/carousel",
+      },
     ]);
 
     return {
@@ -343,18 +347,19 @@ img {
   background-color: white;
 }
 .cd-website-app-nav {
-  border-right: 1px solid #dcdfe6;
   position: sticky;
   top: 50px;
+  border-right: 1px solid #dcdfe6;
   overflow: auto;
   height: calc(100vh - 50px);
   min-width: 280px;
   flex: 1;
 }
 .cd-website-app-nav-vanishanimation {
-  position: relative;
+  position: sticky;
+  top: 50px;
   overflow: auto;
-  height: 100vh;
+  height: calc(100vh - 50px);
   width: 0px;
   transform: translateX(-100%);
   animation: vanishanimation 0.1s linear;
@@ -370,9 +375,10 @@ img {
   }
 }
 .cd-website-app-nav-showanimation {
-  position: relative;
+  position: sticky;
+  top: 50px;
   overflow: auto;
-  height: 100vh;
+  height: calc(100vh - 50px);
   animation: showanimation 0.1s linear;
 }
 @keyframes showanimation {
@@ -405,6 +411,7 @@ img {
   position: absolute;
   width: 280px;
   right: 0px;
+  padding: 15px 0px;
 }
 .cd-website-app-nav-list-every-frame {
   position: relative;

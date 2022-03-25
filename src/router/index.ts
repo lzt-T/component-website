@@ -164,6 +164,14 @@ const routes: Array<RouteRecordRaw> = [
     },
     component: () => import("@/views/badge/index.vue")
   },
+  {
+    name: 'CarouselRoute',
+    path: '/carousel',
+    meta: {
+      title: 'Carousel 走马灯 | Carpediem'
+    },
+    component: () => import("@/views/carousel/index.vue")
+  },
 ]
 
 const router = createRouter({
