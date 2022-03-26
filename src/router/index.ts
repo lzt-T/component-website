@@ -188,6 +188,14 @@ const routes: Array<RouteRecordRaw> = [
     },
     component: () => import("@/views/empty/index.vue")
   },
+  {
+    name: 'imageRoute',
+    path: '/image',
+    meta: {
+      title: 'Image 图片 | Carpediem'
+    },
+    component: () => import("@/views/image/index.vue")
+  },
 ]
 
 const router = createRouter({

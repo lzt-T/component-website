@@ -251,6 +251,10 @@ export default {
         title: "Empty 空状态",
         router: "/empty",
       },
+      {
+        title: "Image 图片",
+        router: "/image",
+      },
     ]);
 
     return {
@@ -271,20 +275,20 @@ export default {
 </script>
 
 <style>
-body::-webkit-scrollbar {
+*::-webkit-scrollbar {
   height: 6px;
   width: 6px;
 }
 /* 滑块 */
-body:hover::-webkit-scrollbar-thumb {
+*:hover::-webkit-scrollbar-thumb {
   background: rgba(0, 0, 0, 0.2);
 }
 /* 滚动槽 */
-body::-webkit-scrollbar-track {
+*::-webkit-scrollbar-track {
   border-radius: 10px;
 }
 /* 滚动条滑块 */
-body::-webkit-scrollbar-thumb {
+*::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background: rgba(0, 0, 0, 0.2);
 }
