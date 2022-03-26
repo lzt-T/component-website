@@ -255,6 +255,10 @@ export default {
         title: "Image 图片",
         router: "/image",
       },
+      {
+        title: "Pagination 分页",
+        router: "/pagination",
+      },
     ]);
 
     return {

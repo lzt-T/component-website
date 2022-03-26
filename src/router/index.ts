@@ -196,6 +196,14 @@ const routes: Array<RouteRecordRaw> = [
     },
     component: () => import("@/views/image/index.vue")
   },
+  {
+    name: 'paginationRoute',
+    path: '/pagination',
+    meta: {
+      title: 'Pagination 分页 | Carpediem'
+    },
+    component: () => import("@/views/pagination/index.vue")
+  },
 ]
 
 const router = createRouter({
