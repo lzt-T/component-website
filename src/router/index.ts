@@ -204,6 +204,14 @@ const routes: Array<RouteRecordRaw> = [
     },
     component: () => import("@/views/pagination/index.vue")
   },
+  {
+    name: 'progressRoute',
+    path: '/progress',
+    meta: {
+      title: 'Progress 进度条 | Carpediem'
+    },
+    component: () => import("@/views/progress/index.vue")
+  },
 ]
 
 const router = createRouter({

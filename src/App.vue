@@ -259,6 +259,10 @@ export default {
         title: "Pagination 分页",
         router: "/pagination",
       },
+      {
+        title: "Progress 进度条",
+        router: "/progress",
+      },
     ]);
 
     return {
