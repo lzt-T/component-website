@@ -57,7 +57,7 @@
     &lt;/script>        
         </pre>
       </cd-collapse>
-      <h2 id="one" :ref="anchor" class="cd-public-headline-h2">带斑马纹表格</h2>
+      <h2 id="two" :ref="anchor" class="cd-public-headline-h2">带斑马纹表格</h2>
       <p class="cd-public-p">
         使用带斑马纹的表格，可以更容易区分出不同行的数据
       </p>
@@ -115,7 +115,7 @@
     &lt;/script>        
         </pre>
       </cd-collapse>
-      <h2 id="one" :ref="anchor" class="cd-public-headline-h2">带边框表格</h2>
+      <h2 id="three" :ref="anchor" class="cd-public-headline-h2">带边框表格</h2>
       <p class="cd-public-p">
         默认情况下，Table 组件是不具有竖直方向的边框的， 如果需要，可以使用
         <code>border</code> 属性，把该属性设置为 <code>true</code> 即可启用
@@ -171,7 +171,7 @@
     &lt;/script>        
         </pre>
       </cd-collapse>
-      <h2 id="one" :ref="anchor" class="cd-public-headline-h2">固定表头</h2>
+      <h2 id="four" :ref="anchor" class="cd-public-headline-h2">固定表头</h2>
       <p class="cd-public-p">纵向内容过多时，可选择固定表头</p>
       <p class="cd-public-p">
         使用时设置 <code>maxHeight</code> 属性,同时设置
@@ -245,7 +245,7 @@
     &lt;/script>        
         </pre>
       </cd-collapse>
-      <h2 id="four" :ref="anchor" class="cd-public-headline-h2">Table 属性</h2>
+      <h2 id="five" :ref="anchor" class="cd-public-headline-h2">Table 属性</h2>
       <cd-table
         :data="tableAttributesForm"
         :listName="['属性', '说明', '类型', '可选值', '默认值']"
@@ -338,23 +338,23 @@ export default {
     let rightNavData = ref<rightNav[]>([
       {
         anchorName: "one",
-        title: "基础用法",
+        title: "基础表格",
       },
       {
         anchorName: "two",
-        title: "禁用状态",
+        title: "带斑马纹表格",
       },
       {
         anchorName: "three",
-        title: "图标链接",
+        title: "带边框表格",
       },
       {
         anchorName: "four",
-        title: "Link 属性",
+        title: "固定表头",
       },
       {
         anchorName: "five",
-        title: "Link 插槽",
+        title: "Table 属性",
       },
     ]);
     let isRightNavShow = ref<boolean>(true);
