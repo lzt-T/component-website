@@ -260,6 +260,14 @@ const routes: Array<RouteRecordRaw> = [
     },
     component: () => import("@/views/tabs/index.vue")
   },
+  {
+    name: 'alertRoute',
+    path: '/alert',
+    meta: {
+      title: 'Alert 提示 | Carpediem'
+    },
+    component: () => import("@/views/alert/index.vue")
+  },
 ]
 
 const router = createRouter({

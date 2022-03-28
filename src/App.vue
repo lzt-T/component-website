@@ -287,6 +287,10 @@ export default {
         title: "Tabs 标签页",
         router: "/tabs",
       },
+      {
+        title: "Alert 提示",
+        router: "/alert",
+      },
     ]);
 
     return {
@@ -337,7 +341,7 @@ img {
 }
 .cd-website-app-header {
   position: sticky;
-  z-index: 1;
+  z-index: 2;
   top: 0;
   height: 50px;
   width: 100vw;
@@ -379,7 +383,7 @@ img {
 }
 .cd-website-app-conceal {
   position: sticky;
-  z-index: 1;
+  z-index: 2;
   top: 50px;
   padding-left: 10px;
   height: 33px;
@@ -387,7 +391,6 @@ img {
   width: 100%;
   border-top: 1px solid #dcdfe6;
   border-bottom: 1px solid #dcdfe6;
-  background-color: white;
   background-color: white;
 }
 .cd-website-app-nav {
