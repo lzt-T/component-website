@@ -73,7 +73,7 @@
   <cd-drawer
     v-model="controlNav"
     direction="left"
-    :size="35"
+    :size="45"
     title="Menu"
     class="cd-website-app-nav-list-every-frame"
   >
@@ -270,6 +270,10 @@ export default {
       {
         title: "Tag 标签",
         router: "/tag",
+      },
+      {
+        title: "Backtop 回到顶部",
+        router: "/backtop",
       },
     ]);
 

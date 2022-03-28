@@ -228,6 +228,14 @@ const routes: Array<RouteRecordRaw> = [
     },
     component: () => import("@/views/tag/index.vue")
   },
+  {
+    name: 'backtopRoute',
+    path: '/backtop',
+    meta: {
+      title: 'BackTop 回到顶部 | Carpediem'
+    },
+    component: () => import("@/views/backtop/index.vue")
+  },
 ]
 
 const router = createRouter({
