@@ -267,6 +267,10 @@ export default {
         title: "Table 表格",
         router: "/table",
       },
+      {
+        title: "Tag 标签",
+        router: "/tag",
+      },
     ]);
 
     return {

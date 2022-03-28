@@ -220,6 +220,14 @@ const routes: Array<RouteRecordRaw> = [
     },
     component: () => import("@/views/table/index.vue")
   },
+  {
+    name: 'tagRoute',
+    path: '/tag',
+    meta: {
+      title: 'Tag 标签 | Carpediem'
+    },
+    component: () => import("@/views/tag/index.vue")
+  },
 ]
 
 const router = createRouter({
