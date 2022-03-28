@@ -244,6 +244,14 @@ const routes: Array<RouteRecordRaw> = [
     },
     component: () => import("@/views/breadcrumb/index.vue")
   },
+  {
+    name: 'pageheaderRoute',
+    path: '/pageheader',
+    meta: {
+      title: 'Page Header 面包屑 | Carpediem'
+    },
+    component: () => import("@/views/pageheader/index.vue")
+  },
 ]
 
 const router = createRouter({

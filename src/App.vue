@@ -279,6 +279,10 @@ export default {
         title: "Breadcrumb 面包屑",
         router: "/breadcrumb",
       },
+      {
+        title: "Page Header 页头",
+        router: "/pageheader",
+      },
     ]);
 
     return {
