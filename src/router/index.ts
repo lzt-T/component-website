@@ -212,6 +212,14 @@ const routes: Array<RouteRecordRaw> = [
     },
     component: () => import("@/views/progress/index.vue")
   },
+  {
+    name: 'tableRoute',
+    path: '/table',
+    meta: {
+      title: 'Table 表格 | Carpediem'
+    },
+    component: () => import("@/views/table/index.vue")
+  },
 ]
 
 const router = createRouter({

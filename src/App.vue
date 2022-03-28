@@ -263,6 +263,10 @@ export default {
         title: "Progress 进度条",
         router: "/progress",
       },
+      {
+        title: "Table 表格",
+        router: "/table",
+      },
     ]);
 
     return {
