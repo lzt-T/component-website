@@ -252,6 +252,14 @@ const routes: Array<RouteRecordRaw> = [
     },
     component: () => import("@/views/pageheader/index.vue")
   },
+  {
+    name: 'tabsRoute',
+    path: '/tabs',
+    meta: {
+      title: 'Tabs 标签页 | Carpediem'
+    },
+    component: () => import("@/views/tabs/index.vue")
+  },
 ]
 
 const router = createRouter({

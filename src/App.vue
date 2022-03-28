@@ -283,6 +283,10 @@ export default {
         title: "Page Header 页头",
         router: "/pageheader",
       },
+      {
+        title: "Tabs 标签页",
+        router: "/tabs",
+      },
     ]);
 
     return {
