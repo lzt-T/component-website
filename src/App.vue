@@ -275,6 +275,10 @@ export default {
         title: "Backtop 回到顶部",
         router: "/backtop",
       },
+      {
+        title: "Breadcrumb 面包屑",
+        router: "/breadcrumb",
+      },
     ]);
 
     return {

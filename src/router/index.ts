@@ -236,6 +236,14 @@ const routes: Array<RouteRecordRaw> = [
     },
     component: () => import("@/views/backtop/index.vue")
   },
+  {
+    name: 'breadcrumbRoute',
+    path: '/breadcrumb',
+    meta: {
+      title: 'Breadcrumb 面包屑 | Carpediem'
+    },
+    component: () => import("@/views/breadcrumb/index.vue")
+  },
 ]
 
 const router = createRouter({
