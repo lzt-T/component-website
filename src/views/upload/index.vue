@@ -2,12 +2,12 @@
   <div class="cd-public-frame">
     <section class="cd-public-left-frame">
       <h1 class="cd-public-headline-h1">Upload 上传</h1>
-      <cd-alter
+      <cd-alert
         type="warning"
         title="upload 组件上传成功后会有 √ 的标志,没有出现则是上传失败,本组件使用 FormData、XMLHttpRequest 上传"
         showIcon
         :closable="false"
-      ></cd-alter>
+      ></cd-alert>
       <p class="cd-public-p">通过点击或拖放上传文件</p>
       <h2 id="one" :ref="anchor" class="cd-public-headline-h2">基础用法</h2>
       <p class="cd-public-p">可通过设置 limit 来限制上传文件的个数</p>
@@ -50,12 +50,12 @@
       <h2 id="three" :ref="anchor" class="cd-public-headline-h2">
         以图片形式显示
       </h2>
-      <cd-alter
+      <cd-alert
         type="warning"
         title="要通过 height、width 属性重新设定宽高,否者将会使用 240*32 的默认宽高"
         showIcon
         :closable="false"
-      ></cd-alter>
+      ></cd-alert>
       <p class="cd-public-p">
         通过设置 <code>type</code> 为<code>picture</code>,也可以通过设置
         <code>autoUpload</code> 为<code>false</code> 实现手动上传

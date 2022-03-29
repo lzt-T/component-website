@@ -3,12 +3,12 @@
     <section class="cd-public-left-frame">
       <h1 class="cd-public-headline-h1">Radio 单选框</h1>
       <p class="cd-public-p">在一组备选项中进行单选</p>
-      <cd-alter
+      <cd-alert
         type="warning"
         title=" radio 组件传入v-model、name和label属性是必要的"
         showIcon
         :closable="false"
-      ></cd-alter>
+      ></cd-alert>
       <h2 id="one" :ref="anchor" class="cd-public-headline-h2">基础用法</h2>
       <p class="cd-public-p">
         单选框不应该有太多的可选项，

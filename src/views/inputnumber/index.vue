@@ -72,12 +72,12 @@
         </pre>
       </cd-collapse>
       <h2 id="three" :ref="anchor" class="cd-public-headline-h2">步进</h2>
-      <cd-alter
+      <cd-alert
         type="warning"
         title="步进的实际长度是根据 step*precision，step最好是一个非负数的整数"
         showIcon
         :closable="false"
-      ></cd-alter>
+      ></cd-alert>
       <p class="cd-public-p">允许定义递增递减的步进控制</p>
       <p class="cd-public-p">设置 <code>step</code> 属性可以控制步长,默认为1</p>
       <div class="cd-public-div-frame">
@@ -109,12 +109,12 @@
         </pre>
       </cd-collapse>
       <h2 id="four" :ref="anchor" class="cd-public-headline-h2">精度</h2>
-      <cd-alter
+      <cd-alert
         type="warning"
         title="对精度的解释为保留小数点后几位，如0.1保留小数点后一位，并且会四舍五入"
         showIcon
         :closable="false"
-      ></cd-alter>
+      ></cd-alert>
       <p class="cd-public-p">
         设置 <code>precision</code> 属性可以控制数值精度，接收一个
         <code>Number</code>

@@ -2,12 +2,12 @@
   <div class="cd-public-frame">
     <section class="cd-public-left-frame">
       <h1 class="cd-public-headline-h1">Cascader 级联选择器</h1>
-      <cd-alter
+      <cd-alert
         type="warning"
         title="Cascader 组件最高可以支持4级的数据选择"
         showIcon
         :closable="false"
-      ></cd-alter>
+      ></cd-alert>
       <p class="cd-public-p">
         当一个数据集合有清晰的层级结构时，可通过级联选择器逐级查看并选择
       </p>

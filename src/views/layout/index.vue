@@ -3,12 +3,12 @@
     <section class="cd-public-left-frame">
       <h1 class="cd-public-headline-h1">Layout 布局</h1>
       <p class="cd-public-p">通过基础的 24 分栏，迅速简便地创建布局</p>
-      <cd-alter
+      <cd-alert
         title="组件默认使用 Flex 布局，不需要手动设置"
         type="warning"
         :showIcon="true"
         :closable="false"
-      ></cd-alter>
+      ></cd-alert>
       <h2 id="one" :ref="anchor" class="cd-public-headline-h2">基础布局</h2>
       <p class="cd-public-p">使用列创建基础网格布局</p>
       <p class="cd-public-p">
@@ -157,12 +157,12 @@
         </pre>
       </cd-collapse>
       <h2 id="four" :ref="anchor" class="cd-public-headline-h2">列偏移</h2>
-      <cd-alter
+      <cd-alert
         title="使用 offset 属性,不能给 col 组件设置水平margin值,不然会导致offest失效"
         type="warning"
         :showIcon="true"
         :closable="false"
-      ></cd-alter>
+      ></cd-alert>
       <p class="cd-public-p">您可以指定列偏移量</p>
       <p class="cd-public-p">
         通过制定 <code>col</code> 组件的

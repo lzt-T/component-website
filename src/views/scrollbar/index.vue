@@ -46,12 +46,12 @@
         </pre>
       </cd-collapse>
       <h2 id="two" :ref="anchor" class="cd-public-headline-h2">横向滚动</h2>
-      <cd-alter
+      <cd-alert
         type="warning"
         title="如果是使用flex布局,请注意设定子元素的 width:0 "
         showIcon
         :closable="false"
-      ></cd-alter>
+      ></cd-alert>
       <p class="cd-public-p">
         通过 <code>crosswise</code> 属性来设置元素横向显示
       </p>

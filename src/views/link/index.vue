@@ -56,12 +56,12 @@
         </pre>
       </cd-collapse>
       <h2 id="three" :ref="anchor" class="cd-public-headline-h2">图标链接</h2>
-      <cd-alter
+      <cd-alert
         type="warning"
         title=" icon 组件的大小设定成文字大小一样，才会跟文字垂直居中"
         showIcon
         :closable="false"
-      ></cd-alter>
+      ></cd-alert>
       <p class="cd-public-p">带图标的链接</p>
       <div class="cd-public-div-frame">
         <cd-row :gap="20" flexWrap="wrap">

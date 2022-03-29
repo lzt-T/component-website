@@ -25,6 +25,7 @@
         'cd-website-app-nav-vanishanimation': isConceal && isAnimation,
         'cd-website-app-nav-showanimation': isConceal == false && isAnimation,
       }"
+      ref="leftNav"
     >
       <div class="cd-website-app-nav-list">
         <div
@@ -100,6 +101,7 @@ import { useRoute, useRouter } from "vue-router";
 export default {
   props: {},
   setup() {
+    let leftNav = ref<object>();
     let app = ref<HTMLElement>();
     let appWidth = ref<number>();
     let isAnimation = ref<boolean>(false);
@@ -131,6 +133,9 @@ export default {
       if (newval) {
         isAnimation.value = true;
       }
+    });
+    watch(route, () => {
+      console.log();
     });
     onMounted(() => {
       onResize();
@@ -322,6 +327,7 @@ export default {
       selectInd,
       githubImg,
       carpediemImg,
+      leftNav,
     };
   },
 };

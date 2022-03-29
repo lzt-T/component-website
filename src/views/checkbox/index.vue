@@ -103,12 +103,12 @@
         </pre>
       </cd-collapse>
       <h2 id="three" :ref="anchor" class="cd-public-headline-h2">多选框组</h2>
-      <cd-alter
+      <cd-alert
         type="warning"
         title="使用多选框组时，一定要传入 v-model、option、value 属性"
         showIcon
         :closable="false"
-      ></cd-alter>
+      ></cd-alert>
       <p class="cd-public-p">
         以字符串数组的形式绑定 <code>v-model</code> 属性来确定哪些
         <code>option</code> 初始是选中的

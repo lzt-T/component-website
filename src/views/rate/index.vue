@@ -11,7 +11,7 @@
         <code>lowThreshold</code> 和 <code>highThreshold</code> 设定。
       </p>
       <div class="cd-public-div-frame">
-        <cd-row gap="100" flexWrap="wrap" align="center">
+        <cd-row :gap="100" flexWrap="wrap" align="center">
           <div><cd-rate v-model="rateData"></cd-rate> Default</div>
           <div>
             <cd-rate v-model="rateData1"></cd-rate> Color for different levels
@@ -21,7 +21,7 @@
       <cd-collapse title="查看代码">
         <pre>
   &lt;template&gt;
-    &lt;cd-row gap="100" flexWrap="wrap" align="center">
+    &lt;cd-row :gap="100" flexWrap="wrap" align="center">
       &lt;div>&lt;cd-rate v-model="rateData">&lt;/cd-rate> Default&lt;/div>
       &lt;div>
         &lt;cd-rate v-model="rateData1">&lt;/cd-rate> Color for different levels

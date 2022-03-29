@@ -174,7 +174,7 @@
           <cd-input
             v-model="textareaData"
             type="textarea"
-            rows="3"
+            :rows="3"
             :width="300"
           ></cd-input>
         </cd-row>
@@ -186,7 +186,7 @@
           &lt;cd-input
             v-model="textareaData"
             type="textarea"
-            rows="3"
+            :rows="3"
             :width="300"
           >&lt;/cd-input>
         &lt;/cd-row>

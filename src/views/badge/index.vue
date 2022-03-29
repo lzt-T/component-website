@@ -79,10 +79,10 @@
       </p>
       <div class="cd-public-div-frame">
         <cd-row :gap="20" flexWrap="wrap">
-          <cd-badge :value="'new'">
+          <cd-badge value="new">
             <cd-button :width="120">Carpediem</cd-button>
           </cd-badge>
-          <cd-badge :value="'hot'">
+          <cd-badge value="hot">
             <cd-button :width="120">Carpediem</cd-button>
           </cd-badge>
         </cd-row>
@@ -91,10 +91,10 @@
         <pre>
   &lt;template&gt;
     &lt;cd-row :gap="20" flexWrap="wrap">
-      &lt;cd-badge :value="'new'">
+      &lt;cd-badge value="new">
         &lt;cd-button :width="120">Carpediem&lt;/cd-button>
       &lt;/cd-badge>
-      &lt;cd-badge :value="'hot'">
+      &lt;cd-badge value="hot">
         &lt;cd-button :width="120">Carpediem&lt;/cd-button>
       &lt;/cd-badge>
     &lt;/cd-row>
