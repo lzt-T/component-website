@@ -19,12 +19,12 @@
       <h2 id="two" :ref="anchor" class="cd-public-headline-h2">自定义图标</h2>
       <p class="cd-public-p">通过 <code>icon</code> 属性可以改变图标</p>
       <div class="cd-public-div-frame">
-        <cd-pageheader content="detail" icon="leftArrowTow"> </cd-pageheader>
+        <cd-pageheader content="detail" icon="leftArrowTwo"> </cd-pageheader>
       </div>
       <cd-collapse title="查看代码">
         <pre>
     &lt;template&gt;
-        &lt;cd-pageheader content="detail" icon="leftArrowTow"> &lt;/cd-pageheader>
+        &lt;cd-pageheader content="detail" icon="leftArrowTwo"> &lt;/cd-pageheader>
     &lt;/template&gt;
         </pre>
       </cd-collapse>

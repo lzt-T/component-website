@@ -58,7 +58,7 @@
         <cd-row :gap="45" flexWrap="wrap">
           <cd-avatar icon="usersThree"></cd-avatar>
           <cd-avatar icon="man"></cd-avatar>
-          <cd-avatar icon="usersTow"></cd-avatar>
+          <cd-avatar icon="usersTwo"></cd-avatar>
           <cd-avatar icon="woman"></cd-avatar>
         </cd-row>
       </div>
@@ -68,7 +68,7 @@
     &lt;cd-row :gap="45" flexWrap="wrap">
       &lt;cd-avatar icon="usersThree">&lt;/cd-avatar>
       &lt;cd-avatar icon="man">&lt;/cd-avatar>
-      &lt;cd-avatar icon="usersTow">&lt;/cd-avatar>
+      &lt;cd-avatar icon="usersTwo">&lt;/cd-avatar>
       &lt;cd-avatar icon="woman">&lt;/cd-avatar>
     &lt;/cd-row>
   &lt;/template&gt;

@@ -106,7 +106,7 @@
         <cd-image src="https://cdn.jsdelivr.net/gh/lztnb/img@maste/4.jpg">
           <template v-slot:err>
             <div class="cd-website-image-errslot">
-              <cd-icon name="pictureTow" :size="70" color="#a8abb2"></cd-icon>
+              <cd-icon name="pictureTwo" :size="70" color="#a8abb2"></cd-icon>
             </div>
           </template>
         </cd-image>
@@ -123,7 +123,7 @@
         &lt;cd-image src="https://cdn.jsdelivr.net/gh/lztnb/img@maste/4.jpg">
           &lt;template v-slot:err>
             &lt;div class="cd-website-image-errslot">
-              &lt;cd-icon name="pictureTow" :size="70" color="#a8abb2">&lt;/cd-icon>
+              &lt;cd-icon name="pictureTwo" :size="70" color="#a8abb2">&lt;/cd-icon>
             &lt;/div>
           &lt;/template>
         &lt;/cd-image>

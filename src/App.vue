@@ -12,13 +12,14 @@
     </div>
     <a
       class="cd-website-app-header-githubImg"
-      href="https://github.com/lzt-T/component-website"
+      href="https://github.com/lzt-T/cd-ui"
     >
       <img :src="githubImg" />
     </a>
   </header>
   <!-- 大体框架 -->
   <div class="cd-website-app-frame" ref="app">
+    <!-- 左侧导航栏 -->
     <nav
       :class="{
         'cd-website-app-nav': true && isConceal == false,
@@ -30,18 +31,77 @@
     >
       <div class="cd-website-app-nav-list">
         <div
-          v-for="(data, ind) in navList"
-          :key="ind"
           :class="{
             'cd-website-app-nav-list-every': true,
-            'cd-website-app-nav-list-every-select': selectInd == ind,
+            'cd-website-app-nav-list-every-select': selectInd == 0,
           }"
-          @click="selectRouter(data.router, ind)"
+          @click="selectRouter('/homepage', 0)"
         >
-          {{ data.title }}
+          Homepage 主页
+        </div>
+        <div class="cd-website-app-nav-list-title">Basic 基础组件</div>
+        <div v-for="(data, ind) in basedComponent" :key="ind">
+          <div
+            :class="{
+              'cd-website-app-nav-list-every': true,
+              'cd-website-app-nav-list-every-select': selectInd == data.ind,
+            }"
+            @click="selectRouter(data.router, data.ind)"
+          >
+            {{ data.title }}
+          </div>
+        </div>
+        <div class="cd-website-app-nav-list-title">Form 表单组件</div>
+        <div v-for="(data, ind) in formComponents" :key="ind">
+          <div
+            :class="{
+              'cd-website-app-nav-list-every': true,
+              'cd-website-app-nav-list-every-select': selectInd == data.ind,
+            }"
+            @click="selectRouter(data.router, data.ind)"
+          >
+            {{ data.title }}
+          </div>
+        </div>
+        <div class="cd-website-app-nav-list-title">Data 数据展示</div>
+        <div v-for="(data, ind) in dataDisplay" :key="ind">
+          <div
+            :class="{
+              'cd-website-app-nav-list-every': true,
+              'cd-website-app-nav-list-every-select': selectInd == data.ind,
+            }"
+            @click="selectRouter(data.router, data.ind)"
+          >
+            {{ data.title }}
+          </div>
+        </div>
+        <div class="cd-website-app-nav-list-title">Navigation 导航</div>
+        <div v-for="(data, ind) in navigation" :key="ind">
+          <div
+            :class="{
+              'cd-website-app-nav-list-every': true,
+              'cd-website-app-nav-list-every-select': selectInd == data.ind,
+            }"
+            @click="selectRouter(data.router, data.ind)"
+          >
+            {{ data.title }}
+          </div>
+        </div>
+        <div class="cd-website-app-nav-list-title">Feedback 反馈组件</div>
+        <div v-for="(data, ind) in feedback" :key="ind">
+          <div
+            :class="{
+              'cd-website-app-nav-list-every': true,
+              'cd-website-app-nav-list-every-select': selectInd == data.ind,
+            }"
+            @click="selectRouter(data.router, data.ind)"
+          >
+            {{ data.title }}
+          </div>
         </div>
       </div>
     </nav>
+    <!-- 右侧内容 -->
     <section class="cd-website-app-content">
       <div class="cd-website-app-conceal" v-show="isConceal">
         <cd-icon name="menu" :size="24" @click="onMenuChange"></cd-icon>
@@ -57,7 +117,7 @@
           v-show="selectInd - 1 >= 0"
           @click="selectRouter(navList[selectInd - 1]?.router, selectInd - 1)"
         >
-          <cd-icon name="leftArrowTow" :size="20"></cd-icon>
+          <cd-icon name="leftArrowTwo" :size="20"></cd-icon>
           <div>{{ navList[selectInd - 1]?.title }}</div>
         </div>
         <div
@@ -66,7 +126,7 @@
           @click="selectRouter(navList[selectInd + 1]?.router, selectInd + 1)"
         >
           <div>{{ navList[selectInd + 1]?.title }}</div>
-          <cd-icon name="rightArrowTow" :size="20"></cd-icon>
+          <cd-icon name="rightArrowTwo" :size="20"></cd-icon>
         </div>
       </footer>
     </section>
@@ -81,16 +141,75 @@
     :zIndex="2"
   >
     <div
-      v-for="(data, ind) in navList"
-      :key="ind"
       :class="{
         'cd-website-app-nav-list-every': true,
-        'cd-website-app-nav-list-every-select': selectInd == ind,
+        'cd-website-app-nav-list-every-select': selectInd == 0,
       }"
-      @click="selectRouter(data.router, ind)"
+      @click="selectRouter('/homepage', 0)"
     >
-      {{ data.title }}
+      Homepage 主页
     </div>
+    <div class="cd-website-app-nav-list-title">Basic 基础组件</div>
+    <div v-for="(data, ind) in basedComponent" :key="ind">
+      <div
+        :class="{
+          'cd-website-app-nav-list-every': true,
+          'cd-website-app-nav-list-every-select': selectInd == data.ind,
+        }"
+        @click="selectRouter(data.router, data.ind)"
+      >
+        {{ data.title }}
+      </div>
+    </div>
+    <div class="cd-website-app-nav-list-title">Form 表单组件</div>
+    <div v-for="(data, ind) in formComponents" :key="ind">
+      <div
+        :class="{
+          'cd-website-app-nav-list-every': true,
+          'cd-website-app-nav-list-every-select': selectInd == data.ind,
+        }"
+        @click="selectRouter(data.router, data.ind)"
+      >
+        {{ data.title }}
+      </div>
+    </div>
+    <div class="cd-website-app-nav-list-title">Data 数据展示</div>
+    <div v-for="(data, ind) in dataDisplay" :key="ind">
+      <div
+        :class="{
+          'cd-website-app-nav-list-every': true,
+          'cd-website-app-nav-list-every-select': selectInd == data.ind,
+        }"
+        @click="selectRouter(data.router, data.ind)"
+      >
+        {{ data.title }}
+      </div>
+    </div>
+    <div class="cd-website-app-nav-list-title">Navigation 导航</div>
+    <div v-for="(data, ind) in navigation" :key="ind">
+      <div
+        :class="{
+          'cd-website-app-nav-list-every': true,
+          'cd-website-app-nav-list-every-select': selectInd == data.ind,
+        }"
+        @click="selectRouter(data.router, data.ind)"
+      >
+        {{ data.title }}
+      </div>
+    </div>
+    <div class="cd-website-app-nav-list-title">Feedback 反馈组件</div>
+    <div v-for="(data, ind) in feedback" :key="ind">
+      <div
+        :class="{
+          'cd-website-app-nav-list-every': true,
+          'cd-website-app-nav-list-every-select': selectInd == data.ind,
+        }"
+        @click="selectRouter(data.router, data.ind)"
+      >
+        {{ data.title }}
+      </div>
+    </div>
+    <br />
   </cd-drawer>
 </template>
 
@@ -126,9 +245,29 @@ export default {
     const route = useRoute();
     function refresh(): void {
       isRefresh.value = true;
-      navList.value.forEach((val, ind) => {
+      basedComponent.value.forEach((val, ind) => {
         if (val.router == route.path) {
-          selectInd.value = ind;
+          selectInd.value = val.ind;
+        }
+      });
+      formComponents.value.forEach((val, ind) => {
+        if (val.router == route.path) {
+          selectInd.value = val.ind;
+        }
+      });
+      dataDisplay.value.forEach((val, ind) => {
+        if (val.router == route.path) {
+          selectInd.value = val.ind;
+        }
+      });
+      navigation.value.forEach((val, ind) => {
+        if (val.router == route.path) {
+          selectInd.value = val.ind;
+        }
+      });
+      feedback.value.forEach((val, ind) => {
+        if (val.router == route.path) {
+          selectInd.value = val.ind;
         }
       });
     }
@@ -139,7 +278,7 @@ export default {
         if (selectInd.value >= 10) {
           setTimeout(() => {
             (leftNav.value as HTMLDivElement).scrollTo({
-              top: (selectInd.value - 10) * 41,
+              top: (selectInd.value - 10) * 45,
             });
           }, 10);
         }
@@ -149,7 +288,7 @@ export default {
       if (newval) {
         if (selectInd.value >= 10) {
           (leftNav.value as HTMLDivElement).scrollTo({
-            top: (selectInd.value - 10) * 41,
+            top: (selectInd.value - 10) * 45,
             behavior: "smooth",
           });
         }
@@ -182,162 +321,388 @@ export default {
     interface navEveryObject {
       title: string;
       router: string;
+      ind: number;
     }
-    let navList = ref<navEveryObject[]>([
-      {
-        title: "Homepage 主页",
-        router: "/homepage",
-      },
+    let basedComponent = ref<navEveryObject[]>([
       {
         title: "Button 按钮",
         router: "/button",
+        ind: 1,
       },
       {
         title: "Boeder 边框",
         router: "/border",
+        ind: 2,
       },
       {
         title: "Icon 图标",
         router: "/icon",
+        ind: 3,
       },
       {
         title: "Layout 布局",
         router: "/layout",
+        ind: 4,
       },
       {
         title: "Link 链接",
         router: "/link",
+        ind: 5,
       },
       {
         title: "Scrollbar 滚动条",
         router: "/scrollbar",
+        ind: 6,
       },
+    ]);
+    let formComponents = ref<navEveryObject[]>([
       {
         title: "Cascader 级联选择器",
         router: "/cascader",
+        ind: 7,
       },
       {
         title: "Checkbox 多选框",
         router: "/checkbox",
+        ind: 8,
       },
       {
         title: "DatePicker 日期选择器",
         router: "/datepicker",
+        ind: 9,
       },
       {
         title: "Input 输入框",
         router: "/input",
+        ind: 10,
       },
       {
         title: "Input Number 数字输入框",
         router: "/inputNumber",
+        ind: 11,
       },
       {
         title: "Radio 单选框",
         router: "/radio",
+        ind: 12,
       },
       {
         title: "Rate 评分",
         router: "/rate",
+        ind: 13,
       },
       {
         title: "Select 选择器",
         router: "/select",
+        ind: 14,
       },
       {
         title: "Slider 滑块",
         router: "/slider",
+        ind: 15,
       },
       {
         title: "Swicth 滑块",
         router: "/switch",
+        ind: 16,
       },
       {
         title: "Upload 上传",
         router: "/upload",
+        ind: 17,
       },
+    ]);
+    let dataDisplay = ref<navEveryObject[]>([
       {
         title: "Avatar 头像",
         router: "/avatar",
+        ind: 18,
       },
       {
         title: "Badge 徽章",
         router: "/badge",
+        ind: 19,
       },
       {
         title: "Carousel 走马灯",
         router: "/carousel",
+        ind: 20,
       },
       {
         title: "Collapse 折叠面板",
         router: "/collapse",
+        ind: 21,
       },
       {
         title: "Empty 空状态",
         router: "/empty",
+        ind: 22,
       },
       {
         title: "Image 图片",
         router: "/image",
+        ind: 23,
       },
       {
         title: "Pagination 分页",
         router: "/pagination",
+        ind: 24,
       },
       {
         title: "Progress 进度条",
         router: "/progress",
+        ind: 25,
       },
       {
         title: "Table 表格",
         router: "/table",
+        ind: 26,
       },
       {
         title: "Tag 标签",
         router: "/tag",
+        ind: 27,
       },
+    ]);
+    let navigation = ref<navEveryObject[]>([
       {
         title: "Backtop 回到顶部",
         router: "/backtop",
+        ind: 28,
       },
       {
         title: "Breadcrumb 面包屑",
         router: "/breadcrumb",
+        ind: 29,
       },
       {
         title: "Page Header 页头",
         router: "/pageheader",
+        ind: 30,
       },
       {
         title: "Tabs 标签页",
         router: "/tabs",
+        ind: 31,
       },
+    ]);
+    let feedback = ref<navEveryObject[]>([
       {
         title: "Alert 提示",
         router: "/alert",
+        ind: 32,
       },
       {
         title: "Dialog 对话框",
         router: "/dialog",
+        ind: 33,
       },
       {
         title: "Drawer 抽屉",
         router: "/drawer",
+        ind: 34,
       },
       {
         title: "Message 抽屉",
         router: "/message",
+        ind: 35,
       },
       {
         title: "Tooltip 文字提示",
         router: "/tooltip",
+        ind: 36,
       },
     ]);
-
+    let navList = ref<navEveryObject[]>([
+      {
+        title: "Homepage 主页",
+        router: "/homepage",
+        ind: 0,
+      },
+      {
+        title: "Button 按钮",
+        router: "/button",
+        ind: 1,
+      },
+      {
+        title: "Boeder 边框",
+        router: "/border",
+        ind: 2,
+      },
+      {
+        title: "Icon 图标",
+        router: "/icon",
+        ind: 3,
+      },
+      {
+        title: "Layout 布局",
+        router: "/layout",
+        ind: 4,
+      },
+      {
+        title: "Link 链接",
+        router: "/link",
+        ind: 5,
+      },
+      {
+        title: "Scrollbar 滚动条",
+        router: "/scrollbar",
+        ind: 6,
+      },
+      {
+        title: "Cascader 级联选择器",
+        router: "/cascader",
+        ind: 7,
+      },
+      {
+        title: "Checkbox 多选框",
+        router: "/checkbox",
+        ind: 8,
+      },
+      {
+        title: "DatePicker 日期选择器",
+        router: "/datepicker",
+        ind: 9,
+      },
+      {
+        title: "Input 输入框",
+        router: "/input",
+        ind: 10,
+      },
+      {
+        title: "Input Number 数字输入框",
+        router: "/inputNumber",
+        ind: 11,
+      },
+      {
+        title: "Radio 单选框",
+        router: "/radio",
+        ind: 12,
+      },
+      {
+        title: "Rate 评分",
+        router: "/rate",
+        ind: 13,
+      },
+      {
+        title: "Select 选择器",
+        router: "/select",
+        ind: 14,
+      },
+      {
+        title: "Slider 滑块",
+        router: "/slider",
+        ind: 15,
+      },
+      {
+        title: "Swicth 滑块",
+        router: "/switch",
+        ind: 16,
+      },
+      {
+        title: "Upload 上传",
+        router: "/upload",
+        ind: 17,
+      },
+      {
+        title: "Avatar 头像",
+        router: "/avatar",
+        ind: 18,
+      },
+      {
+        title: "Badge 徽章",
+        router: "/badge",
+        ind: 19,
+      },
+      {
+        title: "Carousel 走马灯",
+        router: "/carousel",
+        ind: 20,
+      },
+      {
+        title: "Collapse 折叠面板",
+        router: "/collapse",
+        ind: 21,
+      },
+      {
+        title: "Empty 空状态",
+        router: "/empty",
+        ind: 22,
+      },
+      {
+        title: "Image 图片",
+        router: "/image",
+        ind: 23,
+      },
+      {
+        title: "Pagination 分页",
+        router: "/pagination",
+        ind: 24,
+      },
+      {
+        title: "Progress 进度条",
+        router: "/progress",
+        ind: 25,
+      },
+      {
+        title: "Table 表格",
+        router: "/table",
+        ind: 26,
+      },
+      {
+        title: "Tag 标签",
+        router: "/tag",
+        ind: 27,
+      },
+      {
+        title: "Backtop 回到顶部",
+        router: "/backtop",
+        ind: 28,
+      },
+      {
+        title: "Breadcrumb 面包屑",
+        router: "/breadcrumb",
+        ind: 29,
+      },
+      {
+        title: "Page Header 页头",
+        router: "/pageheader",
+        ind: 30,
+      },
+      {
+        title: "Tabs 标签页",
+        router: "/tabs",
+        ind: 31,
+      },
+      {
+        title: "Alert 提示",
+        router: "/alert",
+        ind: 32,
+      },
+      {
+        title: "Dialog 对话框",
+        router: "/dialog",
+        ind: 33,
+      },
+      {
+        title: "Drawer 抽屉",
+        router: "/drawer",
+        ind: 34,
+      },
+      {
+        title: "Message 抽屉",
+        router: "/message",
+        ind: 35,
+      },
+      {
+        title: "Tooltip 文字提示",
+        router: "/tooltip",
+        ind: 36,
+      },
+    ]);
     return {
       app,
       onResize,
-      navList,
       isConceal,
       controlNav,
       onMenuChange,
@@ -347,6 +712,12 @@ export default {
       githubImg,
       carpediemImg,
       leftNav,
+      basedComponent,
+      formComponents,
+      dataDisplay,
+      navigation,
+      feedback,
+      navList,
     };
   },
 };
@@ -496,6 +867,7 @@ img {
   border-radius: 10px;
   background: rgba(0, 0, 0, 0.2);
 }
+
 .cd-website-app-nav-list {
   position: absolute;
   width: 280px;
@@ -505,10 +877,16 @@ img {
 .cd-website-app-nav-list-every-frame {
   position: relative;
 }
+.cd-website-app-nav-list-title {
+  font-weight: 700;
+  padding: 25px 15px 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
 .cd-website-app-nav-list-every {
-  margin-top: 2px;
-  margin-bottom: 2px;
-  padding: 10px 20px;
+  font-size: 14px;
+  margin: 0px 8px;
+  padding: 10px 32px 10px 35px;
   border-radius: 5px;
   cursor: pointer;
 }

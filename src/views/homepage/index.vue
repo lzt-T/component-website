@@ -22,17 +22,25 @@
       <section class="cd-website-manual">
         <h2 id="one" :ref="anchor" class="cd-public-headline-h2">使用指南</h2>
         <div>
+          <h4>安装</h4>
+          <div class="cd-website-manual-whole-situation-content">
+            <div>npm install carpediem-ui</div>
+          </div>
+        </div>
+        <div>
           <h4>全局使用</h4>
           <div class="cd-website-manual-whole-situation-content">
             <div>import Carpediem from 'carpediem-ui'</div>
             <div>import 'carpediem-ui/lib/index.css'</div>
+            <div>app.use(Carpediem)</div>
           </div>
         </div>
         <div>
           <h4>按需引入</h4>
           <div class="cd-website-manual-need-content">
-            <div>import {CdButton} from 'carpediem-ui'</div>
+            <div>import { CdButton } from 'carpediem-ui'</div>
             <div>import 'carpediem-ui/lib/index.css'</div>
+            <div>app.use(CdButton)</div>
           </div>
         </div>
       </section>

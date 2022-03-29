@@ -54,13 +54,13 @@
       <div class="cd-public-div-frame">
         <cd-breadcrumb
           :options="options"
-          separatorIcon="rightArrowTow"
+          separatorIcon="rightArrowTwo"
         ></cd-breadcrumb>
       </div>
       <cd-collapse title="查看代码">
         <pre>
     &lt;template&gt;
-        &lt;cd-breadcrumb :options="options" separatorIcon="rightArrowTow">&lt;/cd-breadcrumb>
+        &lt;cd-breadcrumb :options="options" separatorIcon="rightArrowTwo">&lt;/cd-breadcrumb>
     &lt;/template&gt;
 
     &lt;script lang="ts">

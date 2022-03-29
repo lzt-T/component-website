@@ -69,7 +69,7 @@
             round
             :size="33"
             :width="60"
-            ><cd-icon name="searchTow" :size="12" color="white"></cd-icon
+            ><cd-icon name="searchTwo" :size="12" color="white"></cd-icon
           ></cd-button>
         </cd-row>
       </div>
@@ -129,7 +129,7 @@
       :size="33"
       :width="60"
     >
-      &lt;cd-icon name="searchTow" :size="12" color="white">&lt;/cd-icon>
+      &lt;cd-icon name="searchTwo" :size="12" color="white">&lt;/cd-icon>
     &lt;/cd-button>
   &lt;/template&gt;        
 </pre
@@ -217,7 +217,7 @@
       <div class="cd-public-div-frame">
         <cd-row :gap="20" class="cd-button-row-margin">
           <cd-button>
-            <cd-icon name="searchTow" :size="17"></cd-icon>搜索
+            <cd-icon name="searchTwo" :size="17"></cd-icon>搜索
           </cd-button>
           <cd-button>
             <cd-icon name="setting" :size="17"></cd-icon>设置
@@ -231,7 +231,7 @@
         <pre>
   &lt;template&gt;  
     &lt;cd-button>
-      &lt;cd-icon name="searchTow" :size="17">&lt;/cd-icon>搜索
+      &lt;cd-icon name="searchTwo" :size="17">&lt;/cd-icon>搜索
     &lt;/cd-button>
     &lt;cd-button>
       &lt;cd-icon name="setting" :size="17">&lt;/cd-icon>设置

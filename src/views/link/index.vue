@@ -65,14 +65,14 @@
       <p class="cd-public-p">带图标的链接</p>
       <div class="cd-public-div-frame">
         <cd-row :gap="20" flexWrap="wrap">
-          <cd-link> <cd-icon name="editTow" :size="16"></cd-icon>Edit</cd-link>
+          <cd-link> <cd-icon name="editTwo" :size="16"></cd-icon>Edit</cd-link>
           <cd-link> <cd-icon name="trash" :size="16"></cd-icon>Trash</cd-link>
         </cd-row>
       </div>
       <cd-collapse title="查看代码">
         <pre>
     &lt;template&gt;
-        &lt;cd-link> &lt;cd-icon name="editTow" :size="16">&lt;/cd-icon>Edit &lt;/cd-link>
+        &lt;cd-link> &lt;cd-icon name="editTwo" :size="16">&lt;/cd-icon>Edit &lt;/cd-link>
         &lt;cd-link> &lt;cd-icon name="trash" :size="16">&lt;/cd-icon>Trash &lt;/cd-link>
     &lt;/template&gt;
         </pre>

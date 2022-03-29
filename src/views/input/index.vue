@@ -129,7 +129,7 @@
       </h2>
       <div class="cd-public-div-frame">
         <cd-row :gap="20" flexWrap="wrap">
-          <cd-input v-model="inputPrefixIcon" prefixIcon="searchTow"></cd-input>
+          <cd-input v-model="inputPrefixIcon" prefixIcon="searchTwo"></cd-input>
           <cd-input v-model="inputSuffixIcon" suffixIcon="edit"></cd-input>
         </cd-row>
       </div>
@@ -142,7 +142,7 @@
         <pre>
     &lt;template&gt;
         &lt;cd-row :gap="20" flexWrap="wrap">
-            &lt;cd-input v-model="inputPrefixIcon" prefixIcon="searchTow">&lt;/cd-input>
+            &lt;cd-input v-model="inputPrefixIcon" prefixIcon="searchTwo">&lt;/cd-input>
             &lt;cd-input v-model="inputSuffixIcon" suffixIcon="edit">&lt;/cd-input>
         &lt;/cd-row>
     &lt;/template&gt;
@@ -298,14 +298,14 @@
         <cd-input
           v-model="inputSearch"
           :selectData="searchData"
-          prefixIcon="searchTow"
+          prefixIcon="searchTwo"
         >
         </cd-input>
       </div>
       <cd-collapse title="查看代码">
         <pre>
     &lt;template&gt;
-      &lt;cd-input v-model="inputSearch" :selectData="searchData" prefixIcon="searchTow"> &lt;/cd-input>
+      &lt;cd-input v-model="inputSearch" :selectData="searchData" prefixIcon="searchTwo"> &lt;/cd-input>
     &lt;/template&gt;
 
     &lt;script lang="ts">

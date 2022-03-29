@@ -3,9 +3,9 @@
     <section class="cd-public-left-frame">
       <cd-message
         v-model="isShow"
+        :zIndex="4"
         message="复制成功"
         type="success"
-        class="cd-website-message"
       ></cd-message>
       <h1 class="cd-public-headline-h1">Icon 图标</h1>
       <p class="cd-public-p">为用户提供一些常用的图标集合</p>
@@ -160,20 +160,20 @@ export default {
         copydata: ' <cd-icon name="leftArrow"></cd-icon>',
       },
       {
-        name: "leftArrowTow",
-        copydata: ' <cd-icon name="leftArrowTow"></cd-icon>',
+        name: "leftArrowTwo",
+        copydata: ' <cd-icon name="leftArrowTwo"></cd-icon>',
       },
       {
-        name: "downArrowTow",
-        copydata: ' <cd-icon name="downArrowTow"></cd-icon>',
+        name: "downArrowTwo",
+        copydata: ' <cd-icon name="downArrowTwo"></cd-icon>',
       },
       {
-        name: "rightArrowTow",
-        copydata: ' <cd-icon name="rightArrowTow"></cd-icon>',
+        name: "rightArrowTwo",
+        copydata: ' <cd-icon name="rightArrowTwo"></cd-icon>',
       },
       {
-        name: "upArrowTow",
-        copydata: ' <cd-icon name="upArrowTow"></cd-icon>',
+        name: "upArrowTwo",
+        copydata: ' <cd-icon name="upArrowTwo"></cd-icon>',
       },
       {
         name: "caretDown",
@@ -228,8 +228,8 @@ export default {
         copydata: ' <cd-icon name="wifi"></cd-icon>',
       },
       {
-        name: "wifiTow",
-        copydata: ' <cd-icon name="wifiTow"></cd-icon>',
+        name: "wifiTwo",
+        copydata: ' <cd-icon name="wifiTwo"></cd-icon>',
       },
       {
         name: "battery",
@@ -272,8 +272,8 @@ export default {
         copydata: ' <cd-icon name="search"></cd-icon>',
       },
       {
-        name: "searchTow",
-        copydata: ' <cd-icon name="searchTow"></cd-icon>',
+        name: "searchTwo",
+        copydata: ' <cd-icon name="searchTwo"></cd-icon>',
       },
       {
         name: "menu",
@@ -296,8 +296,8 @@ export default {
         copydata: ' <cd-icon name="message"></cd-icon>',
       },
       {
-        name: "messageTow",
-        copydata: ' <cd-icon name="messageTow"></cd-icon>',
+        name: "messageTwo",
+        copydata: ' <cd-icon name="messageTwo"></cd-icon>',
       },
       {
         name: "add",
@@ -416,12 +416,12 @@ export default {
         copydata: ' <cd-icon name="configured"></cd-icon>',
       },
       {
-        name: "editTow",
-        copydata: ' <cd-icon name="editTow"></cd-icon>',
+        name: "editTwo",
+        copydata: ' <cd-icon name="editTwo"></cd-icon>',
       },
       {
-        name: "settingTow",
-        copydata: ' <cd-icon name="settingTow"></cd-icon>',
+        name: "settingTwo",
+        copydata: ' <cd-icon name="settingTwo"></cd-icon>',
       },
       {
         name: "Administrator",
@@ -448,8 +448,8 @@ export default {
         copydata: ' <cd-icon name="previous"></cd-icon>',
       },
       {
-        name: "headsetTow",
-        copydata: ' <cd-icon name="headsetTow"></cd-icon>',
+        name: "headsetTwo",
+        copydata: ' <cd-icon name="headsetTwo"></cd-icon>',
       },
       {
         name: "headsetThree",
@@ -464,8 +464,8 @@ export default {
         copydata: ' <cd-icon name="like"></cd-icon>',
       },
       {
-        name: "usersTow",
-        copydata: ' <cd-icon name="usersTow"></cd-icon>',
+        name: "usersTwo",
+        copydata: ' <cd-icon name="usersTwo"></cd-icon>',
       },
       {
         name: "move",
@@ -492,20 +492,20 @@ export default {
         copydata: ' <cd-icon name="usersThree"></cd-icon>',
       },
       {
-        name: "shoppingTow",
-        copydata: ' <cd-icon name="shoppingTow"></cd-icon>',
+        name: "shoppingTwo",
+        copydata: ' <cd-icon name="shoppingTwo"></cd-icon>',
       },
       {
         name: "guideboard",
         copydata: ' <cd-icon name="guideboard"></cd-icon>',
       },
       {
-        name: "guideboardTow",
-        copydata: ' <cd-icon name="guideboardTow"></cd-icon>',
+        name: "guideboardTwo",
+        copydata: ' <cd-icon name="guideboardTwo"></cd-icon>',
       },
       {
-        name: "pictureTow",
-        copydata: ' <cd-icon name="pictureTow"></cd-icon>',
+        name: "pictureTwo",
+        copydata: ' <cd-icon name="pictureTwo"></cd-icon>',
       },
       {
         name: "fileSearch",
@@ -524,12 +524,12 @@ export default {
         copydata: ' <cd-icon name="blockDiagram"></cd-icon>',
       },
       {
-        name: "blockDiagramTow",
-        copydata: ' <cd-icon name="blockDiagramTow"></cd-icon>',
+        name: "blockDiagramTwo",
+        copydata: ' <cd-icon name="blockDiagramTwo"></cd-icon>',
       },
       {
-        name: "sendTow",
-        copydata: ' <cd-icon name="sendTow"></cd-icon>',
+        name: "sendTwo",
+        copydata: ' <cd-icon name="sendTwo"></cd-icon>',
       },
       {
         name: "label",
@@ -552,16 +552,16 @@ export default {
         copydata: ' <cd-icon name="window"></cd-icon>',
       },
       {
-        name: "trashTow",
-        copydata: ' <cd-icon name="trashTow"></cd-icon>',
+        name: "trashTwo",
+        copydata: ' <cd-icon name="trashTwo"></cd-icon>',
       },
       {
-        name: "volumeTow",
-        copydata: ' <cd-icon name="volumeTow"></cd-icon>',
+        name: "volumeTwo",
+        copydata: ' <cd-icon name="volumeTwo"></cd-icon>',
       },
       {
-        name: "projectorTow",
-        copydata: ' <cd-icon name="projectorTow"></cd-icon>',
+        name: "projectorTwo",
+        copydata: ' <cd-icon name="projectorTwo"></cd-icon>',
       },
       {
         name: "chronometer",
@@ -584,16 +584,16 @@ export default {
         copydata: ' <cd-icon name="usb"></cd-icon>',
       },
       {
-        name: "saveTow",
-        copydata: ' <cd-icon name="saveTow"></cd-icon>',
+        name: "saveTwo",
+        copydata: ' <cd-icon name="saveTwo"></cd-icon>',
       },
       {
         name: "play",
         copydata: ' <cd-icon name="play"></cd-icon>',
       },
       {
-        name: "documentTow",
-        copydata: ' <cd-icon name="documentTow"></cd-icon>',
+        name: "documentTwo",
+        copydata: ' <cd-icon name="documentTwo"></cd-icon>',
       },
       {
         name: "network",
@@ -604,8 +604,8 @@ export default {
         copydata: ' <cd-icon name="data"></cd-icon>',
       },
       {
-        name: "configurationTow",
-        copydata: ' <cd-icon name="configurationTow"></cd-icon>',
+        name: "configurationTwo",
+        copydata: ' <cd-icon name="configurationTwo"></cd-icon>',
       },
       {
         name: "mouse",
@@ -636,8 +636,8 @@ export default {
         copydata: ' <cd-icon name="star"></cd-icon>',
       },
       {
-        name: "locationTow",
-        copydata: ' <cd-icon name="locationTow"></cd-icon>',
+        name: "locationTwo",
+        copydata: ' <cd-icon name="locationTwo"></cd-icon>',
       },
       {
         name: "map",
@@ -711,9 +711,6 @@ export default {
 </script>
 
 <style scoped>
-.cd-website-message {
-  z-index: 1;
-}
 .cd-website-icon-frame {
   display: flex;
   flex-wrap: wrap;
