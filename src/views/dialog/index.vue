@@ -11,7 +11,7 @@
         需要设置 <code>v-model</code> 属性，它接收 <code>Boolean</code>，当为
         <code>true</code> 时显示 Dialog。 Dialog 分为两个部分：body 和
         footer，footer 需要具名为 footer 的 slot。 title
-        属性用于定义标题，它是可选的，默认值为空。 。
+        属性用于定义标题，它是可选的，默认值为空。
       </p>
       <div class="cd-public-div-frame">
         <cd-button text color="#409eFF" @click="changeDialog(true)" :width="200"

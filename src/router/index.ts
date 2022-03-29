@@ -276,6 +276,14 @@ const routes: Array<RouteRecordRaw> = [
     },
     component: () => import("@/views/dialog/index.vue")
   },
+  {
+    name: 'drawerRoute',
+    path: '/drawer',
+    meta: {
+      title: 'Drawer 抽屉 | Carpediem'
+    },
+    component: () => import("@/views/drawer/index.vue")
+  },
 ]
 
 const router = createRouter({

@@ -295,6 +295,10 @@ export default {
         title: "Dialog 对话框",
         router: "/dialog",
       },
+      {
+        title: "Drawer 抽屉",
+        router: "/drawer",
+      },
     ]);
 
     return {
