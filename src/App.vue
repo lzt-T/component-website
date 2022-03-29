@@ -291,6 +291,10 @@ export default {
         title: "Alert 提示",
         router: "/alert",
       },
+      {
+        title: "Dialog 对话框",
+        router: "/dialog",
+      },
     ]);
 
     return {
@@ -495,6 +499,7 @@ img {
 }
 .cd-website-app-footer-hr {
   position: absolute;
+  z-index: 0;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -503,6 +508,7 @@ img {
 }
 .cd-website-app-footer-lefticon {
   position: absolute;
+  z-index: 0;
   left: 30px;
   display: flex;
   align-items: center;
@@ -511,6 +517,7 @@ img {
 }
 .cd-website-app-footer-righticon {
   position: absolute;
+  z-index: 0;
   right: 30px;
   display: flex;
   align-items: center;

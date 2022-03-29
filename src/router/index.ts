@@ -268,6 +268,14 @@ const routes: Array<RouteRecordRaw> = [
     },
     component: () => import("@/views/alert/index.vue")
   },
+  {
+    name: 'dialogRoute',
+    path: '/dialog',
+    meta: {
+      title: 'Dialog 对话框 | Carpediem'
+    },
+    component: () => import("@/views/dialog/index.vue")
+  },
 ]
 
 const router = createRouter({
