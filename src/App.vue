@@ -26,6 +26,7 @@
         'cd-website-app-nav-showanimation': isConceal == false && isAnimation,
       }"
       ref="leftNav"
+      @wheel.stop
     >
       <div class="cd-website-app-nav-list">
         <div
@@ -106,6 +107,7 @@ export default {
     let appWidth = ref<number>();
     let isAnimation = ref<boolean>(false);
     let isConceal = ref<boolean>(false);
+    let isRefresh = ref<boolean>(false);
     // 页面大小改变时
     window.addEventListener("resize", onResize);
     function onResize(): void {
@@ -123,6 +125,7 @@ export default {
     window.addEventListener("pageshow", refresh);
     const route = useRoute();
     function refresh(): void {
+      isRefresh.value = true;
       navList.value.forEach((val, ind) => {
         if (val.router == route.path) {
           selectInd.value = ind;
@@ -132,10 +135,26 @@ export default {
     watch(isConceal, (newval, oldval) => {
       if (newval) {
         isAnimation.value = true;
+      } else {
+        if (selectInd.value >= 10) {
+          setTimeout(() => {
+            (leftNav.value as HTMLDivElement).scrollTo({
+              top: (selectInd.value - 10) * 41,
+            });
+          }, 10);
+        }
       }
     });
-    watch(route, () => {
-      console.log();
+    watch(isRefresh, (newval, oldval) => {
+      if (newval) {
+        if (selectInd.value >= 10) {
+          (leftNav.value as HTMLDivElement).scrollTo({
+            top: (selectInd.value - 10) * 41,
+            behavior: "smooth",
+          });
+        }
+        isRefresh.value = false;
+      }
     });
     onMounted(() => {
       onResize();
