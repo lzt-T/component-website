@@ -292,6 +292,14 @@ const routes: Array<RouteRecordRaw> = [
     },
     component: () => import("@/views/message/index.vue")
   },
+  {
+    name: 'tooltipRoute',
+    path: '/tooltip',
+    meta: {
+      title: 'Tooltip 文字提示 | Carpediem'
+    },
+    component: () => import("@/views/tooltip/index.vue")
+  },
 ]
 
 const router = createRouter({

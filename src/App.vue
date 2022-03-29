@@ -76,6 +76,7 @@
     :size="45"
     title="Menu"
     class="cd-website-app-nav-list-every-frame"
+    :zIndex="2"
   >
     <div
       v-for="(data, ind) in navList"
@@ -303,6 +304,10 @@ export default {
         title: "Message 抽屉",
         router: "/message",
       },
+      {
+        title: "Tooltip 文字提示",
+        router: "/tooltip",
+      },
     ]);
 
     return {
@@ -474,7 +479,6 @@ img {
 }
 .cd-website-app-nav-list-every-frame {
   position: relative;
-  z-index: 2;
 }
 .cd-website-app-nav-list-every {
   margin-top: 2px;
