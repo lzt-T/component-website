@@ -299,6 +299,10 @@ export default {
         title: "Drawer 抽屉",
         router: "/drawer",
       },
+      {
+        title: "Message 抽屉",
+        router: "/message",
+      },
     ]);
 
     return {

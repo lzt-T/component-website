@@ -277,7 +277,7 @@ export default {
         explain: "设置 z-index",
         type: "number",
         optional: "--",
-        default: "--",
+        default: "1",
       },
     ]);
 

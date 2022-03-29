@@ -284,6 +284,14 @@ const routes: Array<RouteRecordRaw> = [
     },
     component: () => import("@/views/drawer/index.vue")
   },
+  {
+    name: 'messageRoute',
+    path: '/message',
+    meta: {
+      title: 'Message 消息提示 | Carpediem'
+    },
+    component: () => import("@/views/message/index.vue")
+  },
 ]
 
 const router = createRouter({
