@@ -31,7 +31,7 @@
     &lt;/template&gt;
         </pre>
       </cd-collapse>
-      <h2 id="one" :ref="anchor" class="cd-public-headline-h2">显示图标</h2>
+      <h2 id="two" :ref="anchor" class="cd-public-headline-h2">显示图标</h2>
       <p class="cd-public-p">你可以通过为 Alert 组件添加图标来提高可读性</p>
       <p class="cd-public-p">
         通过设置 <code>showIcon</code> 属性来显示 Alert 的
@@ -59,7 +59,7 @@
     &lt;/template&gt;
         </pre>
       </cd-collapse>
-      <h2 id="one" :ref="anchor" class="cd-public-headline-h2">文字居中</h2>
+      <h2 id="three" :ref="anchor" class="cd-public-headline-h2">文字居中</h2>
       <p class="cd-public-p">使用 <code>center</code> 属性来让文字水平居中</p>
       <div class="cd-public-div-frame">
         <cd-alert
@@ -103,7 +103,7 @@
     &lt;/template&gt;
         </pre>
       </cd-collapse>
-      <h2 id="one" :ref="anchor" class="cd-public-headline-h2">详细的信息</h2>
+      <h2 id="four" :ref="anchor" class="cd-public-headline-h2">详细信息</h2>
       <p class="cd-public-p">
         为 Alert 组件添加一个更加详细的描述来使用户了解更多信息
       </p>
@@ -131,11 +131,82 @@
     &lt;/template&gt;
         </pre>
       </cd-collapse>
-      <h2 id="one" :ref="anchor" class="cd-public-headline-h2">
-        带有详细的信息
+      <h2 id="five" :ref="anchor" class="cd-public-headline-h2">
+        带有图标的详细信息
       </h2>
       <p class="cd-public-p">这是一个带有图标和描述的例子</p>
-      <div class="cd-public-div-frame"></div>
+      <div class="cd-public-div-frame">
+        <cd-alert
+          title="success alert"
+          type="success"
+          description="more text description"
+          showIcon
+        />
+        <br />
+        <cd-alert
+          title="info alert"
+          type="info"
+          description="more text description"
+          showIcon
+        />
+        <br />
+        <cd-alert
+          title="warning alert"
+          type="warning"
+          description="more text description"
+          showIcon
+        />
+        <br />
+        <cd-alert
+          title="error alert"
+          type="error"
+          description="more text description"
+          showIcon
+        />
+      </div>
+      <cd-collapse title="查看代码">
+        <pre>
+  &lt;template&gt;
+    &lt;cd-alert
+      title="success alert"
+      type="success"
+      description="more text description"
+      showIcon
+    />
+    &lt;br />
+  &lt;cd-alert
+      title="info alert"
+      type="info"
+      description="more text description"
+      showIcon
+    />
+    &lt;br />
+    &lt;cd-alert
+      title="warning alert"
+      type="warning"
+      description="more text description"
+      showIcon
+    />
+    &lt;br />
+    &lt;cd-alert
+      title="error alert"
+      type="error"
+      description="more text description"
+      showIcon
+    >
+  &lt;/template&gt;
+        </pre>
+      </cd-collapse>
+      <h2 id="six" :ref="anchor" class="cd-public-headline-h2">Alert 属性</h2>
+      <cd-table
+        :data="alertAttributesForm"
+        :listName="['属性', '说明', '类型', '可选值', '默认值']"
+      ></cd-table>
+      <h2 id="seven" :ref="anchor" class="cd-public-headline-h2">Alert 事件</h2>
+      <cd-table
+        :data="alertEvent"
+        :listName="['事件名', '说明', '参数']"
+      ></cd-table>
     </section>
 
     <right-nav
@@ -169,19 +240,27 @@ export default {
       },
       {
         anchorName: "two",
-        title: "禁用状态",
+        title: "显示图标",
       },
       {
         anchorName: "three",
-        title: "图标链接",
+        title: "文字居中",
       },
       {
         anchorName: "four",
-        title: "Link 属性",
+        title: "详细信息",
       },
       {
         anchorName: "five",
-        title: "Link 插槽",
+        title: "带有图标的详细信息",
+      },
+      {
+        anchorName: "six",
+        title: "Alert 属性",
+      },
+      {
+        anchorName: "seven",
+        title: "Alert 事件",
       },
     ]);
     let isRightNavShow = ref<boolean>(true);
@@ -192,11 +271,78 @@ export default {
       anchorArray.value.push(el);
     };
     useCurrentAbchor(anchorArray, anchor, currentAnchor);
+    // 表单
+    interface Iattributesfrom {
+      property: string;
+      explain: string;
+      type: string;
+      optional: string;
+      default: string;
+    }
+    let alertAttributesForm = ref<Iattributesfrom[]>([
+      {
+        property: "title",
+        explain: "标题,必传",
+        type: "string",
+        optional: "--",
+        default: "--",
+      },
+      {
+        property: "type",
+        explain: "类型",
+        type: "success | warning | info | error",
+        optional: "--",
+        default: "info",
+      },
+      {
+        property: "description",
+        explain: "描述文本",
+        type: "string",
+        optional: "--",
+        default: "--",
+      },
+      {
+        property: "closable",
+        explain: "是否可以关闭",
+        type: "boolean",
+        optional: "true/false",
+        default: "true",
+      },
+      {
+        property: "center",
+        explain: "文本是否居中",
+        type: "boolean",
+        optional: "true/false",
+        default: "false",
+      },
+      {
+        property: "showIcon",
+        explain: "是否显示图标",
+        type: "boolean",
+        optional: "true/false",
+        default: "false",
+      },
+    ]);
+
+    interface IAlertEvent {
+      property: string;
+      explain: string;
+      parameter: string;
+    }
+    let alertEvent = ref<IAlertEvent[]>([
+      {
+        property: "close",
+        explain: "当点击关闭按钮时触发",
+        parameter: "--",
+      },
+    ]);
     return {
       rightNavData,
       isRightNavShow,
       currentAnchor,
       anchor,
+      alertAttributesForm,
+      alertEvent,
     };
   },
 };
