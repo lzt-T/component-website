@@ -129,7 +129,22 @@ export default {
     rightNav,
   },
   setup() {
-    //   测试
+    //   预加载图片
+    let imgData = ref<string[]>([
+      "https://cdn.jsdelivr.net/gh/lztnb/img@master/1.jpg",
+      "https://cdn.jsdelivr.net/gh/lztnb/img@master/3.jpg",
+      "https://cdn.jsdelivr.net/gh/lztnb/img@master/4.jpg",
+    ]);
+    // 预加载图片
+    function preloadImg(srcArr: string[]): void {
+      if (srcArr instanceof Array) {
+        for (var i = 0; i < srcArr.length; i++) {
+          var oImg = new Image();
+          oImg.src = srcArr[i];
+        }
+      }
+    }
+    preloadImg(imgData.value);
 
     //   对于锚点的处理
     interface rightNav {
