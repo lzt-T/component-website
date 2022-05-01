@@ -724,6 +724,17 @@ export default {
 </script>
 
 <style>
+body {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+a:focus,
+input:focus,
+p:focus,
+div:focus {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-user-modify: read-write-plaintext-only;
+}
+
 *::-webkit-scrollbar {
   height: 6px;
   width: 6px;
@@ -754,7 +765,7 @@ img {
 }
 .cd-website-app-header {
   position: sticky;
-  z-index: 2;
+  z-index: 1;
   top: 0;
   height: 50px;
   width: 100vw;
@@ -796,7 +807,7 @@ img {
 }
 .cd-website-app-conceal {
   position: sticky;
-  z-index: 2;
+  z-index: 1;
   top: 50px;
   padding-left: 10px;
   height: 33px;
