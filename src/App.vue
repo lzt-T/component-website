@@ -402,7 +402,7 @@ export default {
         ind: 15,
       },
       {
-        title: "Swicth 滑块",
+        title: "Swicth 开关",
         router: "/switch",
         ind: 16,
       },

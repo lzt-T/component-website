@@ -1,5 +1,5 @@
 export default function (ind: number, currentAnchor: { value: number }) {
-    setTimeout(() => {
+    setTimeout(() => {     
         currentAnchor.value = ind;
     }, 4);
 }

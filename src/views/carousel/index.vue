@@ -16,9 +16,9 @@
         <cd-carousel
           :height="300"
           :src="[
-            'https://cdn.jsdelivr.net/gh/lztnb/img@master/1.jpg',
-            'https://cdn.jsdelivr.net/gh/lztnb/img@master/3.jpg',
-            'https://cdn.jsdelivr.net/gh/lztnb/img@master/4.jpg',
+            'https://fastly.jsdelivr.net/gh/lztnb/img@master/1.jpg',
+            'https://fastly.jsdelivr.net/gh/lztnb/img@master/3.jpg',
+            'https://fastly.jsdelivr.net/gh/lztnb/img@master/4.jpg',
           ]"
         ></cd-carousel>
         <br />
@@ -28,9 +28,9 @@
           :height="300"
           trigger="click"
           :src="[
-            'https://cdn.jsdelivr.net/gh/lztnb/img@master/1.jpg',
-            'https://cdn.jsdelivr.net/gh/lztnb/img@master/3.jpg',
-            'https://cdn.jsdelivr.net/gh/lztnb/img@master/4.jpg',
+            'https://fastly.jsdelivr.net/gh/lztnb/img@master/1.jpg',
+            'https://fastly.jsdelivr.net/gh/lztnb/img@master/3.jpg',
+            'https://fastly.jsdelivr.net/gh/lztnb/img@master/4.jpg',
           ]"
         ></cd-carousel>
       </div>
@@ -41,9 +41,9 @@
         &lt;cd-carousel
           :height="300"
           :src="[
-            'https://cdn.jsdelivr.net/gh/lztnb/img@master/1.jpg',
-            'https://cdn.jsdelivr.net/gh/lztnb/img@master/3.jpg',
-            'https://cdn.jsdelivr.net/gh/lztnb/img@master/4.jpg',
+            'https://fastly.jsdelivr.net/gh/lztnb/img@master/1.jpg',
+            'https://fastly.jsdelivr.net/gh/lztnb/img@master/3.jpg',
+            'https://fastly.jsdelivr.net/gh/lztnb/img@master/4.jpg',
           ]"
         >&lt;/cd-carousel>
         &lt;br />
@@ -53,9 +53,9 @@
           :height="300"
           trigger="click"
           :src="[
-            'https://cdn.jsdelivr.net/gh/lztnb/img@master/1.jpg',
-            'https://cdn.jsdelivr.net/gh/lztnb/img@master/3.jpg',
-            'https://cdn.jsdelivr.net/gh/lztnb/img@master/4.jpg',
+            'https://fastly.jsdelivr.net/gh/lztnb/img@master/1.jpg',
+            'https://fastly.jsdelivr.net/gh/lztnb/img@master/3.jpg',
+            'https://fastly.jsdelivr.net/gh/lztnb/img@master/4.jpg',
           ]"
         >&lt;/cd-carousel>
     &lt;/template&gt;
@@ -74,9 +74,9 @@
           :height="300"
           arrow="always"
           :src="[
-            'https://cdn.jsdelivr.net/gh/lztnb/img@master/1.jpg',
-            'https://cdn.jsdelivr.net/gh/lztnb/img@master/3.jpg',
-            'https://cdn.jsdelivr.net/gh/lztnb/img@master/4.jpg',
+            'https://fastly.jsdelivr.net/gh/lztnb/img@master/1.jpg',
+            'https://fastly.jsdelivr.net/gh/lztnb/img@master/3.jpg',
+            'https://fastly.jsdelivr.net/gh/lztnb/img@master/4.jpg',
           ]"
         ></cd-carousel>
       </div>
@@ -87,9 +87,9 @@
           :height="300"
           arrow="always"
           :src="[
-            'https://cdn.jsdelivr.net/gh/lztnb/img@master/1.jpg',
-            'https://cdn.jsdelivr.net/gh/lztnb/img@master/3.jpg',
-            'https://cdn.jsdelivr.net/gh/lztnb/img@master/4.jpg',
+            'https://fastly.jsdelivr.net/gh/lztnb/img@master/1.jpg',
+            'https://fastly.jsdelivr.net/gh/lztnb/img@master/3.jpg',
+            'https://fastly.jsdelivr.net/gh/lztnb/img@master/4.jpg',
           ]"
         >&lt;/cd-carousel>
     &lt;/template&gt;
@@ -131,9 +131,9 @@ export default {
   setup() {
     //   预加载图片
     let imgData = ref<string[]>([
-      "https://cdn.jsdelivr.net/gh/lztnb/img@master/1.jpg",
-      "https://cdn.jsdelivr.net/gh/lztnb/img@master/3.jpg",
-      "https://cdn.jsdelivr.net/gh/lztnb/img@master/4.jpg",
+      "https://fastly.jsdelivr.net/gh/lztnb/img@master/1.jpg",
+      "https://fastly.jsdelivr.net/gh/lztnb/img@master/3.jpg",
+      "https://fastly.jsdelivr.net/gh/lztnb/img@master/4.jpg",
     ]);
     // 预加载图片
     function preloadImg(srcArr: string[]): void {

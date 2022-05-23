@@ -18,14 +18,14 @@
       <p class="cd-public-p">通过设置 <code>img</code> 属性传入图片 URL</p>
       <div class="cd-public-div-frame su">
         <cd-empty
-          img="https://cdn.jsdelivr.net/gh/lztnb/img@master/4.jpg"
+          img="https://fastly.jsdelivr.net/gh/lztnb/img@master/4.jpg"
         ></cd-empty>
       </div>
       <cd-collapse title="查看代码">
         <pre>
     &lt;template&gt;
         &lt;cd-empty
-          img="https://cdn.jsdelivr.net/gh/lztnb/img@master/4.jpg"
+          img="https://fastly.jsdelivr.net/gh/lztnb/img@master/4.jpg"
         >&lt;/cd-empty>
     &lt;/template&gt;
         </pre>

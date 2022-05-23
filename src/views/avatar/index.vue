@@ -91,7 +91,7 @@
               fit="fill"
               :size="100"
               shape="square"
-              src="https://cdn.jsdelivr.net/gh/lztnb/img@master/4.jpg"
+              src="https://fastly.jsdelivr.net/gh/lztnb/img@master/4.jpg"
             ></cd-avatar>
           </div>
           <div>
@@ -100,7 +100,7 @@
               fit="contain"
               :size="100"
               shape="square"
-              src="https://cdn.jsdelivr.net/gh/lztnb/img@master/4.jpg"
+              src="https://fastly.jsdelivr.net/gh/lztnb/img@master/4.jpg"
             ></cd-avatar>
           </div>
           <div>
@@ -109,7 +109,7 @@
               fit="cover"
               :size="100"
               shape="square"
-              src="https://cdn.jsdelivr.net/gh/lztnb/img@master/4.jpg"
+              src="https://fastly.jsdelivr.net/gh/lztnb/img@master/4.jpg"
             ></cd-avatar>
           </div>
           <div>
@@ -118,7 +118,7 @@
               fit="none"
               :size="100"
               shape="square"
-              src="https://cdn.jsdelivr.net/gh/lztnb/img@master/4.jpg"
+              src="https://fastly.jsdelivr.net/gh/lztnb/img@master/4.jpg"
             ></cd-avatar>
           </div>
           <div>
@@ -127,7 +127,7 @@
               fit="scale-down"
               :size="100"
               shape="square"
-              src="https://cdn.jsdelivr.net/gh/lztnb/img@master/4.jpg"
+              src="https://fastly.jsdelivr.net/gh/lztnb/img@master/4.jpg"
             ></cd-avatar>
           </div>
         </cd-row>
@@ -142,7 +142,7 @@
           fit="fill"
           :size="100"
           shape="square"
-          src="https://cdn.jsdelivr.net/gh/lztnb/img@master/4.jpg"
+          src="https://fastly.jsdelivr.net/gh/lztnb/img@master/4.jpg"
         >&lt;/cd-avatar>
       &lt;/div>
       &lt;div>
@@ -151,7 +151,7 @@
           fit="contain"
           :size="100"
           shape="square"
-          src="https://cdn.jsdelivr.net/gh/lztnb/img@master/4.jpg"
+          src="https://fastly.jsdelivr.net/gh/lztnb/img@master/4.jpg"
         >&lt;/cd-avatar>
       &lt;/div>    
       &lt;div>
@@ -160,7 +160,7 @@
           fit="cover"
           :size="100"
           shape="square"
-          src="https://cdn.jsdelivr.net/gh/lztnb/img@master/4.jpg"
+          src="https://fastly.jsdelivr.net/gh/lztnb/img@master/4.jpg"
         >&lt;/cd-avatar>
       &lt;/div>
       &lt;div>
@@ -169,7 +169,7 @@
           fit="none"
           :size="100"
           shape="square"
-          src="https://cdn.jsdelivr.net/gh/lztnb/img@master/4.jpg"
+          src="https://fastly.jsdelivr.net/gh/lztnb/img@master/4.jpg"
         >&lt;/cd-avatar>
       &lt;/div>
       &lt;div>
@@ -178,7 +178,7 @@
           fit="scale-down"
           :size="100"
           shape="square"
-          src="https://cdn.jsdelivr.net/gh/lztnb/img@master/4.jpg"
+          src="https://fastly.jsdelivr.net/gh/lztnb/img@master/4.jpg"
         >&lt;/cd-avatar>
       &lt;/div>
     &lt;/cd-row>

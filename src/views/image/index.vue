@@ -16,35 +16,35 @@
             <div>fill</div>
             <cd-image
               fit="fill"
-              src="https://cdn.jsdelivr.net/gh/lztnb/img@master/4.jpg"
+              src="https://fastly.jsdelivr.net/gh/lztnb/img@master/4.jpg"
             ></cd-image>
           </cd-col>
           <cd-col :span="5">
             <div>contain</div>
             <cd-image
               fit="contain"
-              src="https://cdn.jsdelivr.net/gh/lztnb/img@master/4.jpg"
+              src="https://fastly.jsdelivr.net/gh/lztnb/img@master/4.jpg"
             ></cd-image>
           </cd-col>
           <cd-col :span="5">
             <div>cover</div>
             <cd-image
               fit="cover"
-              src="https://cdn.jsdelivr.net/gh/lztnb/img@master/4.jpg"
+              src="https://fastly.jsdelivr.net/gh/lztnb/img@master/4.jpg"
             ></cd-image>
           </cd-col>
           <cd-col :span="5">
             <div>none</div>
             <cd-image
               fit="none"
-              src="https://cdn.jsdelivr.net/gh/lztnb/img@master/4.jpg"
+              src="https://fastly.jsdelivr.net/gh/lztnb/img@master/4.jpg"
             ></cd-image>
           </cd-col>
           <cd-col :span="5">
             <div>scale-down</div>
             <cd-image
               fit="scale-down"
-              src="https://cdn.jsdelivr.net/gh/lztnb/img@master/4.jpg"
+              src="https://fastly.jsdelivr.net/gh/lztnb/img@master/4.jpg"
             ></cd-image>
           </cd-col>
         </cd-row>
@@ -57,35 +57,35 @@
             &lt;div>fill&lt;/div>
             &lt;cd-image
               fit="fill"
-              src="https://cdn.jsdelivr.net/gh/lztnb/img@master/4.jpg"
+              src="https://fastly.jsdelivr.net/gh/lztnb/img@master/4.jpg"
             >&lt;/cd-image>
           &lt;/cd-col>
           &lt;cd-col :span="5">
             &lt;div>contain&lt;/div>
             &lt;cd-image
               fit="contain"
-              src="https://cdn.jsdelivr.net/gh/lztnb/img@master/4.jpg"
+              src="https://fastly.jsdelivr.net/gh/lztnb/img@master/4.jpg"
             >&lt;/cd-image>
           &lt;/cd-col>
           &lt;cd-col :span="5">
             &lt;div>cover&lt;/div>
             &lt;cd-image
               fit="cover"
-              src="https://cdn.jsdelivr.net/gh/lztnb/img@master/4.jpg"
+              src="https://fastly.jsdelivr.net/gh/lztnb/img@master/4.jpg"
             >&lt;/cd-image>
           &lt;/cd-col>
           &lt;cd-col :span="5">
             &lt;div>none&lt;/div>
             &lt;cd-image
               fit="none"
-              src="https://cdn.jsdelivr.net/gh/lztnb/img@master/4.jpg"
+              src="https://fastly.jsdelivr.net/gh/lztnb/img@master/4.jpg"
             >&lt;/cd-image>
           &lt;/cd-col>
           &lt;cd-col :span="5">
             &lt;div>scale-down&lt;/div>
             &lt;cd-image
               fit="scale-down"
-              src="https://cdn.jsdelivr.net/gh/lztnb/img@master/4.jpg"
+              src="https://fastly.jsdelivr.net/gh/lztnb/img@master/4.jpg"
             >&lt;/cd-image>
           &lt;/cd-col>
         &lt;/cd-row>
@@ -98,12 +98,12 @@
       </p>
       <div class="cd-public-div-frame">
         <div>Default</div>
-        <cd-image src="https://cdn.jsdelivr.net/gh/lztnb/img@maste/4.jpg">
+        <cd-image src="https://fastly.jsdelivr.net/gh/lztnb/img@maste/4.jpg">
         </cd-image>
         <br />
         <br />
         <div>Custom</div>
-        <cd-image src="https://cdn.jsdelivr.net/gh/lztnb/img@maste/4.jpg">
+        <cd-image src="https://fastly.jsdelivr.net/gh/lztnb/img@maste/4.jpg">
           <template v-slot:err>
             <div class="cd-website-image-errslot">
               <cd-icon name="pictureTwo" :size="70" color="#a8abb2"></cd-icon>
@@ -115,12 +115,12 @@
         <pre>
     &lt;template&gt;
         &lt;div>Default&lt;/div>
-        &lt;cd-image src="https://cdn.jsdelivr.net/gh/lztnb/img@maste/4.jpg">
+        &lt;cd-image src="https://fastly.jsdelivr.net/gh/lztnb/img@maste/4.jpg">
         &lt;/cd-image>
         &lt;br />
         &lt;br />
         &lt;div>Custom&lt;/div>
-        &lt;cd-image src="https://cdn.jsdelivr.net/gh/lztnb/img@maste/4.jpg">
+        &lt;cd-image src="https://fastly.jsdelivr.net/gh/lztnb/img@maste/4.jpg">
           &lt;template v-slot:err>
             &lt;div class="cd-website-image-errslot">
               &lt;cd-icon name="pictureTwo" :size="70" color="#a8abb2">&lt;/cd-icon>
@@ -150,21 +150,21 @@
       <div class="cd-public-div-frame">
         <div class="cd-website-image-lazy">
           <cd-image
-            src="https://cdn.jsdelivr.net/gh/lztnb/img@master/5.jpg"
+            src="https://fastly.jsdelivr.net/gh/lztnb/img@master/5.jpg"
             lazy
             fit="cover"
           >
           </cd-image>
           <br />
           <cd-image
-            src="https://cdn.jsdelivr.net/gh/lztnb/img@master/6.jpg"
+            src="https://fastly.jsdelivr.net/gh/lztnb/img@master/6.jpg"
             lazy
             fit="cover"
           >
           </cd-image>
           <br />
           <cd-image
-            src="https://cdn.jsdelivr.net/gh/lztnb/img@master/7.jpg"
+            src="https://fastly.jsdelivr.net/gh/lztnb/img@master/7.jpg"
             lazy
             fit="cover"
           >
@@ -176,21 +176,21 @@
   &lt;template&gt;
     &lt;div class="cd-website-image-lazy">
         &lt;cd-image
-            src="https://cdn.jsdelivr.net/gh/lztnb/img@master/5.jpg"
+            src="https://fastly.jsdelivr.net/gh/lztnb/img@master/5.jpg"
             lazy
             fit="cover"
         >
         &lt;/cd-image>
         &lt;br />
         &lt;cd-image
-            src="https://cdn.jsdelivr.net/gh/lztnb/img@master/6.jpg"
+            src="https://fastly.jsdelivr.net/gh/lztnb/img@master/6.jpg"
             lazy
             fit="cover"
         >
         &lt;/cd-image>
         &lt;br />
         &lt;cd-image
-            src="https://cdn.jsdelivr.net/gh/lztnb/img@master/7.jpg"
+            src="https://fastly.jsdelivr.net/gh/lztnb/img@master/7.jpg"
             lazy
             fit="cover"
         >
@@ -214,11 +214,11 @@
       </p>
       <div class="cd-public-div-frame">
         <cd-image
-          src="https://cdn.jsdelivr.net/gh/lztnb/img@master/1.jpg"
+          src="https://fastly.jsdelivr.net/gh/lztnb/img@master/1.jpg"
           :previewSrcList="[
-            'https://cdn.jsdelivr.net/gh/lztnb/img@master/1.jpg',
-            'https://cdn.jsdelivr.net/gh/lztnb/img@master/3.jpg',
-            'https://cdn.jsdelivr.net/gh/lztnb/img@master/4.jpg',
+            'https://fastly.jsdelivr.net/gh/lztnb/img@master/1.jpg',
+            'https://fastly.jsdelivr.net/gh/lztnb/img@master/3.jpg',
+            'https://fastly.jsdelivr.net/gh/lztnb/img@master/4.jpg',
           ]"
           :initialIndex="2"
         >
@@ -228,11 +228,11 @@
         <pre>
     &lt;template&gt;
         &lt;cd-image
-          src="https://cdn.jsdelivr.net/gh/lztnb/img@master/1.jpg"
+          src="https://fastly.jsdelivr.net/gh/lztnb/img@master/1.jpg"
           :previewSrcList="[
-            'https://cdn.jsdelivr.net/gh/lztnb/img@master/1.jpg',
-            'https://cdn.jsdelivr.net/gh/lztnb/img@master/3.jpg',
-            'https://cdn.jsdelivr.net/gh/lztnb/img@master/4.jpg',
+            'https://fastly.jsdelivr.net/gh/lztnb/img@master/1.jpg',
+            'https://fastly.jsdelivr.net/gh/lztnb/img@master/3.jpg',
+            'https://fastly.jsdelivr.net/gh/lztnb/img@master/4.jpg',
           ]"
           :initialIndex="2"
         >
