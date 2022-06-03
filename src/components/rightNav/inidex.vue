@@ -26,6 +26,7 @@ export default defineComponent({
     },
     rightNavData: {
       type: Array,
+      required: true,
     },
     currentAnchor: {
       type: Number,
@@ -52,5 +53,4 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

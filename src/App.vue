@@ -727,7 +727,7 @@ export default {
 body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-a:focus,
+
 input:focus,
 p:focus,
 div:focus {

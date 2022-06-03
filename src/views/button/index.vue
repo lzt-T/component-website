@@ -13,19 +13,11 @@
       </p>
       <div class="cd-public-div-frame">
         <cd-row :gap="20" class="cd-button-row-margin">
-          <cd-button
-            :size="45"
-            :width="120"
-            backgroundCcolor="#409eFF"
-            color="white"
+          <cd-button :size="45" :width="120" backgroundCcolor="#409eFF" color="white"
             >button</cd-button
           >
           <cd-button backgroundCcolor="#409eFF" color="white">button</cd-button>
-          <cd-button
-            backgroundCcolor="#409eFF"
-            color="white"
-            :size="30"
-            :width="60"
+          <cd-button backgroundCcolor="#409eFF" color="white" :size="30" :width="60"
             >button</cd-button
           >
         </cd-row>
@@ -38,37 +30,19 @@
             color="white"
             >button</cd-button
           >
-          <cd-button round backgroundCcolor="#409eFF" color="white"
-            >button</cd-button
-          >
-          <cd-button
-            round
-            backgroundCcolor="#409eFF"
-            color="white"
-            :size="30"
-            :width="60"
+          <cd-button round backgroundCcolor="#409eFF" color="white">button</cd-button>
+          <cd-button round backgroundCcolor="#409eFF" color="white" :size="30" :width="60"
             >button</cd-button
           >
         </cd-row>
         <cd-row :gap="20" class="cd-button-row-margin">
-          <cd-button
-            circle
-            round
-            :size="45"
-            :width="120"
-            backgroundCcolor="#409eFF"
-          >
+          <cd-button circle round :size="45" :width="120" backgroundCcolor="#409eFF">
             <cd-icon name="fit" :size="20" color="white"></cd-icon>
           </cd-button>
           <cd-button backgroundCcolor="#409eFF" circle round
             ><cd-icon name="trash" :size="18" color="white"></cd-icon
           ></cd-button>
-          <cd-button
-            backgroundCcolor="#409eFF"
-            circle
-            round
-            :size="33"
-            :width="60"
+          <cd-button backgroundCcolor="#409eFF" circle round :size="33" :width="60"
             ><cd-icon name="searchTwo" :size="12" color="white"></cd-icon
           ></cd-button>
         </cd-row>
@@ -136,9 +110,7 @@
         >
       </cd-collapse>
       <h2 class="cd-public-headline-h2" :ref="anchor" id="two">禁用状态</h2>
-      <p class="cd-public-p">
-        你可以使用 <code>disabled</code> 属性来定义按钮是否被禁用
-      </p>
+      <p class="cd-public-p">你可以使用 <code>disabled</code> 属性来定义按钮是否被禁用</p>
       <p class="cd-public-p">
         使用 <code>disabled</code> 属性来控制按钮是否为禁用状态。 该属性接受一个
         <code>Boolean</code> 类型的值
@@ -153,9 +125,7 @@
             color="white"
             >button</cd-button
           >
-          <cd-button disabled backgroundCcolor="#409eFF" color="white"
-            >button</cd-button
-          >
+          <cd-button disabled backgroundCcolor="#409eFF" color="white">button</cd-button>
           <cd-button
             disabled
             backgroundCcolor="#409eFF"
@@ -207,8 +177,7 @@
       </cd-collapse>
       <h2 class="cd-public-headline-h2" :ref="anchor" id="four">图标按钮</h2>
       <p class="cd-public-p">
-        使用图标为按钮添加更多的含义。
-        你也可以单独使用图标不添加文字来节省显示区域占用
+        使用图标为按钮添加更多的含义。 你也可以单独使用图标不添加文字来节省显示区域占用
       </p>
       <p class="cd-public-p">
         使用 <code>icon</code> 属性来为按钮添加图标。 你可以在 <code>icon</code>
@@ -216,12 +185,8 @@
       </p>
       <div class="cd-public-div-frame">
         <cd-row :gap="20" class="cd-button-row-margin">
-          <cd-button>
-            <cd-icon name="searchTwo" :size="17"></cd-icon>搜索
-          </cd-button>
-          <cd-button>
-            <cd-icon name="setting" :size="17"></cd-icon>设置
-          </cd-button>
+          <cd-button> <cd-icon name="searchTwo" :size="17"></cd-icon>搜索 </cd-button>
+          <cd-button> <cd-icon name="setting" :size="17"></cd-icon>设置 </cd-button>
           <cd-button :width="120">
             <cd-icon name="cloudDownload" :size="17"></cd-icon>云下载
           </cd-button>
@@ -245,19 +210,14 @@
       <h2 class="cd-public-headline-h2" :ref="anchor" id="five">加载中</h2>
       <p class="cd-public-p">点击按钮来加载数据，并向用户反馈加载状态</p>
       <p class="cd-public-p">
-        通过设置 <code>loading</code> 属性为
-        <code>true</code> 来显示加载中状态,并通过设置
+        通过设置 <code>loading</code> 属性为 <code>true</code> 来显示加载中状态,并通过设置
         <code>lAnimation</code> 来设定加载动画
       </p>
       <div class="cd-public-div-frame">
         <cd-row :gap="20" class="cd-button-row-margin">
           <cd-button loading :width="120">Loading</cd-button>
-          <cd-button loading :width="120" lAnimation="loading-one"
-            >Loading</cd-button
-          >
-          <cd-button loading :width="120" lAnimation="loading-two"
-            >Loading</cd-button
-          >
+          <cd-button loading :width="120" lAnimation="loading-one">Loading</cd-button>
+          <cd-button loading :width="120" lAnimation="loading-two">Loading</cd-button>
         </cd-row>
       </div>
       <cd-collapse title="查看代码">
@@ -274,9 +234,7 @@
         :data="attributesFormData"
         :listName="['属性', '说明', '类型', '可选值', '默认值']"
       ></cd-table>
-      <h2 class="cd-public-headline-h2" :ref="anchor" id="seven">
-        Button 插槽
-      </h2>
+      <h2 class="cd-public-headline-h2" :ref="anchor" id="seven">Button 插槽</h2>
       <cd-table :data="buttonSlot" :listName="['插槽名', '说明']"></cd-table>
     </section>
     <right-nav
@@ -287,17 +245,23 @@
   </div>
 </template>
 
-<script lang='ts'>
+<script lang="ts">
 import "@/assets/css/public.css";
 import useRightNavShow from "@/hooks/useRightNavShow";
 import useCurrentAbchor from "@/hooks/useCurrentAnchor";
 import rightNav from "@/components/rightNav/inidex.vue";
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 export default {
   components: {
     rightNav,
   },
   setup() {
+    let currentAnchor = ref<number>(-1);
+    let anchorArray = ref<object[]>([]);
+    const anchor = (el: object) => {
+      anchorArray.value.push(el);
+    };
+    useCurrentAbchor(anchorArray, anchor, currentAnchor);
     // 锚点
     interface rightNav {
       anchorName: string;
@@ -333,12 +297,6 @@ export default {
         title: "Button 插槽",
       },
     ]);
-    let currentAnchor = ref<number>(-1);
-    let anchorArray = ref<object[]>([]);
-    const anchor = (el: object) => {
-      anchorArray.value.push(el);
-    };
-    useCurrentAbchor(anchorArray, anchor, currentAnchor);
     // attributesForm数据
     interface attributesfrom {
       property: string;

@@ -14,21 +14,23 @@ export default function (anchorArray: any, anchor: object, currentAnchor: { valu
     });
 
     let anchorData: { isShow: boolean, topds: number }[] = [];
+    //初始化锚点
     function initAnchorData(): void {
         for (let i: number = 0; i < length; i++) {
             anchorData[i] = { isShow: false, topds: 0 };
         }
 
     }
+    // 获取元素距离窗口顶部的距离
     function setAnchorTop(): void {
         for (let i: number = 0; i < length; i++) {
             anchorData[i].topds = useDivTop(
                 anchorArray.value[i] as HTMLElement
-            );
+            );         
         }
     }
+    // 设置那个盒子看得见
     function setAnchorIsShow(): void {
-        // 设置那个盒子看得见
         let windowSize: { height: number; width: number } = useWindowSize();
         for (let i: number = 0; i < length; i++) {
             if (
@@ -41,6 +43,7 @@ export default function (anchorArray: any, anchor: object, currentAnchor: { valu
             }
         }
     }
+    // 设置当前的锚点
     function seCurrentAnchor(): void {
         currentAnchor.value = -1
         let isFind: boolean = false
